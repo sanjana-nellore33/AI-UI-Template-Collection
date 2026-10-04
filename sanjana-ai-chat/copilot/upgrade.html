@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copilot - Upgrade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="logo">✦</div>
+            <span>Copilot</span>
+        </div>
+
+        <button class="new-chat" onclick="createNewChat()">
+            <span>＋</span>
+            New chat
+        </button>
+
+        <div class="sidebar-section">
+            <div class="section-title">Recent</div>
+            <div id="historyList"></div>
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <button onclick="showMessage('Settings opened')">
+                ⚙ Settings
+            </button>
+
+            <button onclick="showMessage('Help opened')">
+                ? Help
+            </button>
+
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+            <div class="model-name">
+                <span class="mini-logo">✦</span>
+                Copilot
+            </div>
+
+            <button class="upgrade-btn">
+                Upgrade
+            </button>
+
+        </header>
+
+        <section class="upgrade-page">
+
+            <div class="upgrade-header">
+
+                <div class="upgrade-logo">
+                    ✦
+                </div>
+
+                <h1>Get more from Copilot</h1>
+
+                <p>
+                    Upgrade your coding workflow with more powerful
+                    AI assistance and developer tools.
+                </p>
+
+            </div>
+
+            <div class="plans">
+
+                <div class="plan-card">
+
+                    <div class="plan-title">
+                        Free
+                    </div>
+
+                    <div class="price">
+                        ₹0
+                        <span>/month</span>
+                    </div>
+
+                    <p>
+                        Essential AI assistance for everyday development.
+                    </p>
+
+                    <button class="current-plan">
+                        Current plan
+                    </button>
+
+                    <ul>
+                        <li>✓ Basic coding assistance</li>
+                        <li>✓ Code explanations</li>
+                        <li>✓ Debugging help</li>
+                        <li>✓ Recent chat history</li>
+                    </ul>
+
+                </div>
+
+                <div class="plan-card premium">
+
+                    <div class="popular">
+                        POPULAR
+                    </div>
+
+                    <div class="plan-title">
+                        Copilot Pro
+                    </div>
+
+                    <div class="price">
+                        ₹1,650
+                        <span>/month</span>
+                    </div>
+
+                    <p>
+                        Advanced AI tools for serious development.
+                    </p>
+
+                    <button class="upgrade-plan" onclick="upgradeDemo()">
+                        Upgrade to Pro
+                    </button>
+
+                    <ul>
+                        <li>✓ Advanced coding assistance</li>
+                        <li>✓ Larger coding context</li>
+                        <li>✓ Advanced debugging</li>
+                        <li>✓ Code generation</li>
+                        <li>✓ Faster responses</li>
+                        <li>✓ Priority access</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <p class="upgrade-note">
+                This is a UI demonstration. No real payment is processed.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div class="mobile-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

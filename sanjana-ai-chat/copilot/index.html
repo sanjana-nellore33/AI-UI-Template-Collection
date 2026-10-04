@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copilot - Developer Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="logo">✦</div>
+            <span>Copilot</span>
+        </div>
+
+        <button class="new-chat" onclick="createNewChat()">
+            <span>＋</span>
+            New chat
+        </button>
+
+        <div class="sidebar-section">
+            <div class="section-title">Recent</div>
+            <div id="historyList"></div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <button onclick="showMessage('Settings opened')">
+                ⚙ Settings
+            </button>
+
+            <button onclick="showMessage('Help opened')">
+                ? Help
+            </button>
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+            <div class="model-name">
+                <span class="mini-logo">✦</span>
+                Copilot
+            </div>
+
+            <button class="upgrade-btn" onclick="openUpgrade()">
+                Upgrade
+            </button>
+
+        </header>
+
+        <section class="home">
+
+            <div class="hero">
+
+                <div class="hero-logo">
+                    ✦
+                </div>
+
+                <h1>How can I help you code?</h1>
+
+                <p>
+                    Write, understand, debug and improve your code with Copilot.
+                </p>
+
+            </div>
+
+            <div class="developer-tools">
+
+                <button class="tool-card" onclick="usePrompt('Write a Python function to sort a list')">
+                    <div class="tool-icon blue">⌘</div>
+                    <div>
+                        <strong>Write code</strong>
+                        <span>Create functions and programs</span>
+                    </div>
+                </button>
+
+                <button class="tool-card" onclick="usePrompt('Debug this Python code')">
+                    <div class="tool-icon purple">🐞</div>
+                    <div>
+                        <strong>Debug code</strong>
+                        <span>Find and fix programming errors</span>
+                    </div>
+                </button>
+
+                <button class="tool-card" onclick="usePrompt('Explain this JavaScript code step by step')">
+                    <div class="tool-icon pink">?</div>
+                    <div>
+                        <strong>Explain code</strong>
+                        <span>Understand code step by step</span>
+                    </div>
+                </button>
+
+                <button class="tool-card" onclick="usePrompt('Convert this Python code into JavaScript')">
+                    <div class="tool-icon cyan">⇄</div>
+                    <div>
+                        <strong>Convert code</strong>
+                        <span>Transform code between languages</span>
+                    </div>
+                </button>
+
+            </div>
+
+            <div class="prompt-wrapper">
+
+                <textarea
+                    id="promptInput"
+                    placeholder="Ask Copilot to write or explain code..."
+                    rows="2"
+                    onkeydown="handleEnter(event)"
+                ></textarea>
+
+                <div class="prompt-footer">
+
+                    <span>
+                        ✦ Developer assistant
+                    </span>
+
+                    <button class="send-btn" onclick="sendMessage()">
+                        ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="quick-links">
+
+                <button onclick="usePrompt('How do I create a Git branch?')">
+                    Git & GitHub
+                </button>
+
+                <button onclick="usePrompt('Explain recursion with an example')">
+                    Algorithms
+                </button>
+
+                <button onclick="usePrompt('Create a responsive HTML page')">
+                    Web development
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                Copilot can make mistakes. Review generated code before using it.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div class="mobile-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

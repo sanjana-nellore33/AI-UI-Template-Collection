@@ -1,0 +1,812 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: #303030;
+    background: #f8f7ff;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #eef3ff 0%,
+        #f7f0ff 55%,
+        #fff1f8 100%
+    );
+    border-right: 1px solid #ddd5ee;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+.sidebar.closed {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+
+/* GEMINI STAR */
+
+.gemini-logo {
+    font-size: 27px;
+    background: linear-gradient(
+        135deg,
+        #4285f4,
+        #7b61ff,
+        #d946ef,
+        #f97316
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.close-btn {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    color: #555;
+}
+
+
+/* =========================
+   NEW CHAT
+========================= */
+
+.new-chat {
+    border: 1px solid #d7ccf2;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f4efff
+    );
+    color: #4b3b72;
+    border-radius: 18px;
+    padding: 13px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.new-chat:hover {
+    background: #ece4ff;
+}
+
+
+/* =========================
+   HISTORY
+========================= */
+
+.history {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.history-title {
+    color: #806f99;
+    font-size: 13px;
+    margin: 5px 10px 12px;
+}
+
+.history div {
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.history div:hover {
+    background: #e8ddff;
+}
+
+
+/* =========================
+   SIDEBAR BOTTOM
+========================= */
+
+.sidebar-bottom {
+    border-top: 1px solid #ded5ec;
+    padding-top: 12px;
+}
+
+.side-item {
+    padding: 11px 8px;
+    border-radius: 9px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.side-item:hover {
+    background: #e9e0f7;
+}
+
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main-area {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(
+            circle at 70% 15%,
+            rgba(110, 91, 255, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 30% 80%,
+            rgba(217, 70, 239, 0.07),
+            transparent 30%
+        ),
+        #faf9ff;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    border-bottom: 1px solid #e5dff1;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.menu-btn {
+    border: none;
+    background: transparent;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.model-name {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.model-name span {
+    color: #806f99;
+    margin-left: 4px;
+}
+
+
+/* UPGRADE */
+
+.profile-button {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 19px;
+    background: linear-gradient(
+        135deg,
+        #4285f4,
+        #7b61ff,
+        #c44de8
+    );
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.profile-button:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   CHAT AREA
+========================= */
+
+.chat-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 25px;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    max-width: 900px;
+    margin: 65px auto 30px;
+    text-align: center;
+}
+
+.large-gemini-logo {
+    font-size: 65px;
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #4285f4 10%,
+        #6d5dfc 35%,
+        #c44de8 65%,
+        #f97316 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(
+        0 5px 12px rgba(120, 80, 220, 0.18)
+    );
+}
+
+.welcome h1 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    background: linear-gradient(
+        90deg,
+        #3d6fe8,
+        #7b4fd4,
+        #c23fc7
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome h2 {
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 13px;
+    color: #403b50;
+}
+
+.welcome p {
+    color: #777080;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   PROMPT CARDS
+========================= */
+
+.prompt-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.prompt-cards button {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border: 1px solid #ddd4ee;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #413a4f;
+    transition: 0.2s;
+}
+
+.prompt-cards button:hover {
+    border-color: #b8a5ee;
+    background: #f6f0ff;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(107, 78, 170, 0.10);
+}
+
+.card-icon {
+    font-size: 21px;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.messages {
+    max-width: 850px;
+    margin: auto;
+}
+
+.message {
+    max-width: 80%;
+    padding: 15px 18px;
+    margin: 15px 0;
+    border-radius: 18px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.user-message {
+    margin-left: auto;
+    background: linear-gradient(
+        135deg,
+        #e7eaff,
+        #f2e8ff
+    );
+    border: 1px solid #ddd8f4;
+}
+
+.ai-message {
+    margin-right: auto;
+    background: white;
+    border: 1px solid #ddd7eb;
+    box-shadow:
+        0 4px 15px rgba(95, 75, 140, 0.06);
+}
+
+
+/* =========================
+   PROMPT BOX
+========================= */
+
+.prompt-section {
+    padding: 12px 25px 20px;
+    background: #faf9ff;
+}
+
+.prompt-box {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    background: white;
+    border: 1px solid #d7cdea;
+    border-radius: 28px;
+
+    box-shadow:
+        0 5px 25px rgba(90, 65, 150, 0.10);
+}
+
+.prompt-box:focus-within {
+    border-color: #8b74df;
+    box-shadow:
+        0 5px 25px rgba(103, 75, 190, 0.16);
+}
+
+.prompt-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 10px;
+    color: #333;
+}
+
+.add-btn,
+.mic-btn {
+    border: none;
+    background: transparent;
+    font-size: 19px;
+    padding: 7px;
+    cursor: pointer;
+    color: #665b79;
+}
+
+.send-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #4285f4,
+        #7358df,
+        #c13ed1
+    );
+
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+}
+
+.disclaimer {
+    text-align: center;
+    color: #8a8293;
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   ANSWER PAGE
+========================= */
+
+.answer-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 45px 25px;
+}
+
+.answer-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.answer-header .large-gemini-logo {
+    font-size: 50px;
+}
+
+.answer-header h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #4285f4,
+        #7b61ff,
+        #c44de8
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.answer-header p {
+    color: #777080;
+}
+
+.conversation {
+    max-width: 850px;
+    margin: auto;
+}
+
+.prompt-card,
+.response-card {
+    background: white;
+    border: 1px solid #ddd6ed;
+    border-radius: 19px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow:
+        0 4px 18px rgba(100, 80, 150, 0.06);
+}
+
+.card-label {
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #554a69;
+}
+
+.prompt-text,
+.response-text {
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.response-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.response-actions button {
+    border: 1px solid #ddd5eb;
+    background: white;
+    border-radius: 9px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.response-actions button:hover {
+    background: #f1eaff;
+}
+
+.another-prompt {
+    max-width: 850px;
+    margin: 25px auto;
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #d7cdea;
+    border-radius: 28px;
+    background: white;
+}
+
+.another-prompt input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.another-prompt button {
+    width: 39px;
+    height: 39px;
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #4285f4,
+        #7358df,
+        #c13ed1
+    );
+
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================
+   UPGRADE PAGE
+========================= */
+
+.upgrade-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.upgrade-header {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.upgrade-header .large-gemini-logo {
+    font-size: 52px;
+}
+
+.upgrade-header h1 {
+    font-size: 32px;
+    font-weight: 500;
+
+    background: linear-gradient(
+        90deg,
+        #4285f4,
+        #7b61ff,
+        #c44de8
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 10px;
+}
+
+.upgrade-header p {
+    color: #777080;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.plan-card {
+    position: relative;
+    width: 320px;
+    padding: 30px;
+    background: white;
+    border: 1px solid #ddd5eb;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow:
+        0 6px 25px rgba(95, 70, 150, 0.07);
+}
+
+.plan-card.featured {
+    border: 2px solid #7961df;
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #f8f3ff
+    );
+}
+
+.plan-card h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.plan-card > p {
+    color: #777080;
+}
+
+.price {
+    font-size: 31px !important;
+    font-weight: bold;
+    color: #302a3b !important;
+    margin: 15px 0 !important;
+}
+
+.price span {
+    font-size: 13px;
+    color: #777080;
+    font-weight: normal;
+}
+
+.plan-card ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.plan-card li {
+    margin: 13px 0;
+    color: #4e4758;
+}
+
+.plan-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #4285f4,
+        #7358df,
+        #c13ed1
+    );
+
+    color: white;
+    cursor: pointer;
+}
+
+.plan-button:hover {
+    opacity: 0.9;
+}
+
+.popular {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #4285f4,
+        #c13ed1
+    );
+
+    color: white;
+    border-radius: 15px;
+    padding: 5px 12px;
+    font-size: 10px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 20;
+    }
+
+    .sidebar.closed {
+        width: 0;
+    }
+
+    .overlay.active {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(45, 30, 70, 0.35);
+        z-index: 10;
+    }
+
+    .welcome {
+        margin-top: 40px;
+    }
+
+    .welcome h1 {
+        font-size: 27px;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+
+    .prompt-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .prompt-section {
+        padding: 10px 12px 15px;
+    }
+
+}

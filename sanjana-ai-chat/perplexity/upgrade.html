@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perplexity - Upgrade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="logo">◉</div>
+            <span>Perplexity</span>
+        </div>
+
+        <button class="new-search" onclick="createNewSearch()">
+            <span>＋</span>
+            New search
+        </button>
+
+        <div class="sidebar-section">
+
+            <div class="section-title">
+                Recent searches
+            </div>
+
+            <div id="historyList"></div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <button onclick="showMessage('Discover opened')">
+                ✦ Discover
+            </button>
+
+            <button onclick="showMessage('Settings opened')">
+                ⚙ Settings
+            </button>
+
+            <button onclick="showMessage('Help opened')">
+                ? Help
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div class="model-name">
+                <span class="mini-logo">◉</span>
+                Perplexity
+            </div>
+
+            <button class="upgrade-btn">
+                Upgrade
+            </button>
+
+        </header>
+
+
+        <section class="upgrade-page">
+
+            <div class="upgrade-header">
+
+                <div class="upgrade-logo">
+                    ◉
+                </div>
+
+                <h1>Search deeper with Perplexity Pro</h1>
+
+                <p>
+                    Get more powerful research tools, deeper searches
+                    and advanced AI-powered answers.
+                </p>
+
+            </div>
+
+
+            <div class="plans">
+
+                <div class="plan-card">
+
+                    <div class="plan-title">
+                        Free
+                    </div>
+
+                    <div class="price">
+                        ₹0
+                        <span>/month</span>
+                    </div>
+
+                    <p>
+                        Essential AI search for everyday questions.
+                    </p>
+
+                    <button class="current-plan">
+                        Current plan
+                    </button>
+
+                    <ul>
+                        <li>✓ AI-powered search</li>
+                        <li>✓ Source citations</li>
+                        <li>✓ Recent search history</li>
+                        <li>✓ Related questions</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="plan-card premium">
+
+                    <div class="popular">
+                        POPULAR
+                    </div>
+
+                    <div class="plan-title">
+                        Perplexity Pro
+                    </div>
+
+                    <div class="price">
+                        ₹1,650
+                        <span>/month</span>
+                    </div>
+
+                    <p>
+                        Advanced research tools for deeper discovery.
+                    </p>
+
+                    <button
+                        class="upgrade-plan"
+                        onclick="upgradeDemo()"
+                    >
+                        Upgrade to Pro
+                    </button>
+
+                    <ul>
+                        <li>✓ Advanced AI search</li>
+                        <li>✓ Deeper research</li>
+                        <li>✓ More source analysis</li>
+                        <li>✓ File and document research</li>
+                        <li>✓ Advanced models</li>
+                        <li>✓ Priority access</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <p class="upgrade-note">
+                This is a UI demonstration. No real payment is processed.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div
+    class="mobile-overlay"
+    id="overlay"
+    onclick="toggleSidebar()"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

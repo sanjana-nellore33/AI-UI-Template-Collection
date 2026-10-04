@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Chat - Home</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-header">
+
+            <div class="logo">
+                ✦ AI Chat
+            </div>
+
+            <button
+                class="close-btn"
+                onclick="toggleSidebar()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <button
+            class="new-chat"
+            onclick="newChat()"
+        >
+            + New Chat
+        </button>
+
+
+        <!-- HISTORY IS CREATED BY JAVASCRIPT -->
+
+        <div
+            class="history"
+            id="history"
+        >
+
+            <p>Recent Chats</p>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div>
+                ⚙ Settings
+            </div>
+
+            <div>
+                ❓ Help
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        onclick="toggleSidebar()"
+    ></div>
+
+
+    <!-- MAIN CHAT AREA -->
+
+    <main class="chat-area">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-btn"
+                    onclick="toggleSidebar()"
+                >
+                    ☰
+                </button>
+
+                <span>
+                    AI Chat
+                </span>
+
+            </div>
+
+
+            <button
+                class="upgrade-btn"
+                onclick="location.href='upgrade.html'"
+            >
+                Upgrade
+            </button>
+
+        </header>
+
+
+        <!-- CHAT CONTENT -->
+
+        <div class="chat-content">
+
+
+            <!-- WELCOME -->
+
+            <section
+                class="welcome"
+                id="welcome"
+            >
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+
+                <h1>
+                    How can I help you today?
+                </h1>
+
+
+                <p>
+                    Ask questions, explore ideas,
+                    or create something new.
+                </p>
+
+
+                <div class="suggestions">
+
+
+                    <button
+                        onclick="usePrompt(
+                            'Explain artificial intelligence simply'
+                        )"
+                    >
+                        💡 Explain AI simply
+                    </button>
+
+
+                    <button
+                        onclick="usePrompt(
+                            'Give me ideas for a college project'
+                        )"
+                    >
+                        🎓 Project ideas
+                    </button>
+
+
+                    <button
+                        onclick="usePrompt(
+                            'Help me write a professional email'
+                        )"
+                    >
+                        ✍ Write an email
+                    </button>
+
+
+                    <button
+                        onclick="usePrompt(
+                            'Create a study plan for exams'
+                        )"
+                    >
+                        📚 Create a study plan
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- MESSAGES -->
+
+            <div id="messages"></div>
+
+
+        </div>
+
+
+        <!-- INPUT AREA -->
+
+        <div class="bottom-section">
+
+
+            <div class="input-area">
+
+
+                <input
+                    type="text"
+                    id="promptInput"
+                    placeholder="Message AI Chat..."
+                    autocomplete="off"
+                    onkeydown="handleEnter(event)"
+                >
+
+
+                <button
+                    onclick="sendMessage()"
+                >
+                    ➤
+                </button>
+
+
+            </div>
+
+
+            <p class="disclaimer">
+                AI can make mistakes. Check important information.
+            </p>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

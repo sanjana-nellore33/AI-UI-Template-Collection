@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Chat - Upgrade</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-header">
+
+            <div class="logo">
+                ✦ AI Chat
+            </div>
+
+            <button
+                class="close-btn"
+                onclick="toggleSidebar()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <button
+            class="new-chat"
+            onclick="newChat()"
+        >
+            + New Chat
+        </button>
+
+
+        <div
+            class="history"
+            id="history"
+        >
+
+            <p>
+                Recent Chats
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div>
+                ⚙ Settings
+            </div>
+
+            <div>
+                ❓ Help
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- OVERLAY -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        onclick="toggleSidebar()"
+    ></div>
+
+
+    <!-- MAIN AREA -->
+
+    <main class="chat-area">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-btn"
+                    onclick="toggleSidebar()"
+                >
+                    ☰
+                </button>
+
+                <span>
+                    AI Chat
+                </span>
+
+            </div>
+
+
+            <button
+                class="upgrade-btn"
+            >
+                Upgrade
+            </button>
+
+        </header>
+
+
+        <!-- UPGRADE CONTENT -->
+
+        <div class="upgrade-content">
+
+
+            <div class="upgrade-header">
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+                <h1>
+                    Upgrade your AI experience
+                </h1>
+
+                <p>
+                    Get more powerful features
+                    and higher limits.
+                </p>
+
+            </div>
+
+
+            <!-- PLANS -->
+
+            <div class="plans">
+
+
+                <!-- FREE -->
+
+                <div class="plan-card">
+
+                    <h2>
+                        Free
+                    </h2>
+
+                    <p class="price">
+                        ₹0
+                        <span>/month</span>
+                    </p>
+
+                    <p>
+                        For getting started
+                    </p>
+
+
+                    <ul>
+
+                        <li>✓ Basic AI chat</li>
+
+                        <li>✓ Limited messages</li>
+
+                        <li>✓ Standard responses</li>
+
+                        <li>✓ Basic features</li>
+
+                    </ul>
+
+
+                    <button
+                        class="plan-button"
+                    >
+                        Current Plan
+                    </button>
+
+                </div>
+
+
+                <!-- PRO -->
+
+                <div class="plan-card featured">
+
+                    <div class="popular">
+                        POPULAR
+                    </div>
+
+
+                    <h2>
+                        Pro
+                    </h2>
+
+                    <p class="price">
+                        ₹1,999
+                        <span>/month</span>
+                    </p>
+
+                    <p>
+                        For advanced users
+                    </p>
+
+
+                    <ul>
+
+                        <li>✓ More AI messages</li>
+
+                        <li>✓ Faster responses</li>
+
+                        <li>✓ Advanced AI models</li>
+
+                        <li>✓ Priority access</li>
+
+                    </ul>
+
+
+                    <button
+                        class="plan-button"
+                        onclick="alert('Pro plan selected!')"
+                    >
+                        Upgrade to Pro
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
