@@ -1,0 +1,895 @@
+/* ===================================================== NOTION SaaS BILLING & PRICING Shared CSS for: index.html pricing.html settings.html ===================================================== */ /* ---------- RESET ---------- */ * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { min-height: 100vh; font-family: Arial, Helvetica, sans-serif; background: #f7f6f2; color: #202020; line-height: 1.6; } /* ---------- HEADER ---------- */ .header { min-height: 68px; width: 100%; padding: 0 6%; display: flex; align-items: center; gap: 40px; background: #ffffff; border-bottom: 1px solid #e5e3df; position: sticky; top: 0; z-index: 1000; } /* ---------- LOGO ---------- */ .logo { display: flex; align-items: center; gap: 10px; color: #202020; text-decoration: none; font-size: 21px; font-weight: 700; white-space: nowrap; } .notion-icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 2px solid #202020; border-radius: 4px; background: #ffffff; color: #202020; font-size: 17px; font-weight: 900; box-shadow: 2px 2px 0 #202020; } /* ---------- NAVIGATION ---------- */ .nav { flex: 1; display: flex; align-items: center; gap: 28px; } .nav a { position: relative; color: #68645e; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s ease; } .nav a:hover { color: #202020; } .nav a.active { color: #202020; } .nav a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 2px; background: #202020; } /* ---------- PROFILE ---------- */ .profile { width: 40px; height: 40px; border: none; border-radius: 50%; background: #202020; color: #ffffff; font-size: 14px; font-weight: 700; cursor: pointer; transition: 0.2s ease; } .profile:hover { background: #000000; transform: translateY(-2px); } /* ---------- MAIN CONTAINER ---------- */ .container { width: 100%; max-width: 1150px; margin: 0 auto; padding: 55px 25px 75px; } /* ---------- TYPOGRAPHY ---------- */ h1 { margin-bottom: 14px; font-size: 42px; line-height: 1.15; letter-spacing: -1px; } h2 { line-height: 1.25; } h3 { line-height: 1.3; } p { color: #706c66; } .eyebrow { margin-bottom: 9px; color: #77716a !important; font-size: 11px; font-weight: 800; letter-spacing: 1.7px; } /* ---------- BUTTONS ---------- */ .primary-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 11px 21px; border: none; border-radius: 5px; background: #202020; color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: 0.2s ease; } .primary-btn:hover { background: #000000; transform: translateY(-2px); } .outline-btn { width: 100%; min-height: 44px; padding: 10px 18px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #bbb8b2; border-radius: 5px; background: #ffffff; color: #202020; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: 0.2s ease; } .outline-btn:hover { border-color: #202020; background: #f7f6f2; } .small-btn { min-height: 38px; padding: 8px 15px; border: 1px solid #d0cdc7; border-radius: 5px; background: #ffffff; color: #44403b; font-size: 13px; font-weight: 600; cursor: pointer; } .small-btn:hover { border-color: #202020; } .full-btn { width: 100%; } /* ===================================================== INDEX PAGE ===================================================== */ /* ---------- HERO ---------- */ .hero { min-height: 270px; margin-bottom: 35px; padding: 45px; display: flex; align-items: center; justify-content: space-between; gap: 35px; background: #ebe9e3; border: 1px solid #dedbd4; border-radius: 8px; } .hero-content { max-width: 680px; } .hero-description { max-width: 600px; font-size: 16px; } /* ---------- DASHBOARD CARDS ---------- */ .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 55px; } .card { padding: 25px; background: #ffffff; border: 1px solid #e2dfd9; border-radius: 6px; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03); } .card-label { margin-bottom: 10px; color: #88827b !important; font-size: 11px; font-weight: 800; letter-spacing: 1px; } .card h2 { margin-bottom: 4px; font-size: 26px; } .card p { font-size: 14px; } .badge { display: inline-block; margin-top: 13px; padding: 5px 10px; border-radius: 3px; background: #e9e7e2; color: #48443f; font-size: 10px; font-weight: 800; letter-spacing: 0.5px; } /* ---------- STORAGE PROGRESS ---------- */ .progress { width: 100%; height: 8px; margin: 16px 0 8px; overflow: hidden; border-radius: 10px; background: #e4e1db; } .progress-value { width: 68%; height: 100%; border-radius: 10px; background: #202020; } /* ---------- RECENT PAGES ---------- */ .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 20px; } .page-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } .page-card { min-height: 170px; padding: 20px; display: flex; flex-direction: column; justify-content: flex-end; background: #ffffff; border: 1px solid #e1ded8; border-radius: 6px; cursor: pointer; transition: 0.2s ease; } .page-card:hover { transform: translateY(-4px); border-color: #bcb8b0; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07); } .page-icon { margin-bottom: auto; font-size: 30px; } .page-card h3 { margin-bottom: 3px; font-size: 16px; } .page-card p { font-size: 12px; } /* ===================================================== PRICING PAGE ===================================================== */ .pricing-page { text-align: center; } .pricing-header { max-width: 720px; margin: 0 auto; } .pricing-header > p:not(.eyebrow) { font-size: 15px; } /* ---------- BILLING TOGGLE ---------- */ .billing-toggle { display: inline-flex; gap: 3px; margin: 30px 0 40px; padding: 4px; background: #e5e2dc; border-radius: 5px; } .toggle-btn { min-height: 40px; padding: 9px 23px; border: none; border-radius: 3px; background: transparent; color: #77716a; font-size: 14px; font-weight: 600; cursor: pointer; } .toggle-btn.active { background: #ffffff; color: #202020; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); } /* ---------- PLAN CARDS ---------- */ .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; text-align: left; } .plan-card { position: relative; padding: 32px 27px; background: #ffffff; border: 1px solid #dfdcd6; border-radius: 6px; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03); } .featured-plan { border: 2px solid #202020; } .popular { position: absolute; top: 16px; right: 16px; padding: 5px 8px; background: #202020; color: #ffffff; border-radius: 3px; font-size: 9px; font-weight: 800; } .plan-card h2 { margin-bottom: 7px; font-size: 24px; } .plan-description { font-size: 14px; } /* ---------- PRICE ---------- */ .price { display: flex; align-items: baseline; gap: 5px; margin-top: 22px; } .price span { color: #202020; font-size: 36px; font-weight: 800; } .price small { color: #77716a; font-size: 13px; } /* ---------- FEATURES ---------- */ .features { min-height: 175px; margin: 25px 0; padding: 0; list-style: none; } .features li { margin: 12px 0; color: #55514c; font-size: 14px; } /* ---------- BILLING INFORMATION ---------- */ .billing-info { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; margin-top: 35px; padding: 22px; background: #ffffff; border: 1px solid #e0ddd7; border-radius: 6px; text-align: left; } .billing-info strong { display: block; margin-bottom: 4px; } .billing-info p { font-size: 13px; } /* ===================================================== SETTINGS PAGE ===================================================== */ .settings-header { margin-bottom: 30px; } .settings-card { margin-top: 22px; padding: 30px; background: #ffffff; border: 1px solid #e0ddd7; border-radius: 6px; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03); } .settings-card-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 25px; } .settings-card-header h2 { margin-bottom: 5px; } .settings-card-header p { font-size: 14px; } /* ---------- AVATAR ---------- */ .avatar-large { width: 55px; height: 55px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #202020; color: #ffffff; font-size: 20px; font-weight: 800; } /* ---------- FORM ---------- */ .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } .form-group { margin-bottom: 20px; } .form-group label { display: block; margin-bottom: 7px; color: #44403b; font-size: 14px; font-weight: 600; } .form-group input { width: 100%; min-height: 44px; padding: 11px 14px; border: 1px solid #ccc8c1; border-radius: 4px; background: #ffffff; color: #202020; font-family: inherit; font-size: 14px; outline: none; } .form-group input:focus { border-color: #202020; box-shadow: 0 0 0 3px rgba(32, 32, 32, 0.08); } /* ---------- SUBSCRIPTION ---------- */ .subscription-box { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 18px; padding: 20px; background: #f8f7f4; border: 1px solid #e5e2dc; border-radius: 5px; } .subscription-box h3 { margin-bottom: 4px; } .subscription-box p { margin-bottom: 3px; font-size: 14px; } .subscription-box small { color: #88827b; font-size: 12px; } .link-btn { width: auto; flex-shrink: 0; } /* ---------- CANCEL BUTTON ---------- */ .danger-btn { min-height: 42px; padding: 10px 17px; border: 1px solid #d7aaaa; border-radius: 4px; background: #fff6f6; color: #b3261e; font-size: 13px; font-weight: 700; cursor: pointer; } .danger-btn:hover { background: #ffe9e9; } /* ---------- PREFERENCES ---------- */ .preference-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0; border-bottom: 1px solid #e7e4de; } .preference-row:last-child { border-bottom: none; } .preference-row strong { font-size: 14px; } .preference-row p { margin-top: 3px; font-size: 13px; } /* ---------- TOGGLE SWITCH ---------- */ .switch { position: relative; width: 48px; height: 26px; display: block; flex-shrink: 0; } .switch input { position: absolute; opacity: 0; width: 0; height: 0; } .slider { position: absolute; inset: 0; background: #c9c6c0; border-radius: 30px; cursor: pointer; transition: 0.2s ease; } .slider::before { content: ""; position: absolute; width: 20px; height: 20px; left: 3px; top: 3px; border-radius: 50%; background: #ffffff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: 0.2s ease; } .switch input:checked + .slider { background: #202020; } .switch input:checked + .slider::before { transform: translateX(22px); } /* ===================================================== FOOTER ===================================================== */ .footer { width: 100%; padding: 25px; background: #ffffff; border-top: 1px solid #e3e0da; text-align: center; } .footer p { color: #88827b; font-size: 12px; } /* ===================================================== TABLET ===================================================== */ @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .page-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .plans { grid-template-columns: 1fr; } .plan-card { width: 100%; max-width: 600px; margin: 0 auto; } .billing-info { grid-template-columns: 1fr; } } /* ===================================================== MOBILE ===================================================== */ @media (max-width: 600px) { .header { min-height: auto; flex-wrap: wrap; padding: 14px 18px; gap: 12px; } .profile { margin-left: auto; } .nav { order: 3; width: 100%; justify-content: center; gap: 18px; } .nav a { font-size: 13px; } .container { padding: 35px 16px 55px; } h1 { font-size: 32px; } .hero { flex-direction: column; align-items: flex-start; padding: 28px; } .hero .primary-btn { width: 100%; } .cards { grid-template-columns: 1fr; } .settings-card { padding: 22px; } .form-row { grid-template-columns: 1fr; gap: 0; } .subscription-box { flex-direction: column; align-items: flex-start; } .link-btn { width: 100%; } } /* ===================================================== SMALL MOBILE ===================================================== */ @media (max-width: 400px) { .page-grid { grid-template-columns: 1fr; } .nav { gap: 12px; } .nav a { font-size: 12px; }```css
+/* =====================================================
+   NOTION SaaS BILLING & PRICING
+   Shared CSS for:
+   index.html
+   pricing.html
+   settings.html
+===================================================== */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f6f2;
+    color: #202020;
+    line-height: 1.6;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+    min-height: 68px;
+    width: 100%;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e3df;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #202020;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.notion-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #202020;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #202020;
+    font-size: 17px;
+    font-weight: 900;
+    box-shadow: 2px 2px 0 #202020;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    position: relative;
+    color: #68645e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #202020;
+}
+
+.nav a.active {
+    color: #202020;
+}
+
+.nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background: #202020;
+}
+
+
+/* ---------- PROFILE ---------- */
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #202020;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile:hover {
+    background: #000000;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 25px 75px;
+}
+
+
+/* ---------- TYPOGRAPHY ---------- */
+
+h1 {
+    margin-bottom: 14px;
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+h2 {
+    line-height: 1.25;
+}
+
+h3 {
+    line-height: 1.3;
+}
+
+p {
+    color: #706c66;
+}
+
+.eyebrow {
+    margin-bottom: 9px;
+    color: #77716a !important;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 11px 21px;
+    border: none;
+    border-radius: 5px;
+    background: #202020;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: #000000;
+    transform: translateY(-2px);
+}
+
+.outline-btn {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbb8b2;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #202020;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.outline-btn:hover {
+    border-color: #202020;
+    background: #f7f6f2;
+}
+
+.small-btn {
+    min-height: 38px;
+    padding: 8px 15px;
+    border: 1px solid #d0cdc7;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #44403b;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.small-btn:hover {
+    border-color: #202020;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+
+/* =====================================================
+   INDEX PAGE
+===================================================== */
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 270px;
+    margin-bottom: 35px;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: #ebe9e3;
+    border: 1px solid #dedbd4;
+    border-radius: 8px;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 16px;
+}
+
+
+/* ---------- DASHBOARD CARDS ---------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 55px;
+}
+
+.card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2dfd9;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.card-label {
+    margin-bottom: 10px;
+    color: #88827b !important;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.card h2 {
+    margin-bottom: 4px;
+    font-size: 26px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 13px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #e9e7e2;
+    color: #48443f;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* ---------- STORAGE PROGRESS ---------- */
+
+.progress {
+    width: 100%;
+    height: 8px;
+    margin: 16px 0 8px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e4e1db;
+}
+
+.progress-value {
+    width: 68%;
+    height: 100%;
+    border-radius: 10px;
+    background: #202020;
+}
+
+
+/* ---------- RECENT PAGES ---------- */
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.page-card {
+    min-height: 170px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #ffffff;
+    border: 1px solid #e1ded8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.page-card:hover {
+    transform: translateY(-4px);
+    border-color: #bcb8b0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.page-icon {
+    margin-bottom: auto;
+    font-size: 30px;
+}
+
+.page-card h3 {
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+.page-card p {
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   PRICING PAGE
+===================================================== */
+
+.pricing-page {
+    text-align: center;
+}
+
+.pricing-header {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.pricing-header > p:not(.eyebrow) {
+    font-size: 15px;
+}
+
+
+/* ---------- BILLING TOGGLE ---------- */
+
+.billing-toggle {
+    display: inline-flex;
+    gap: 3px;
+    margin: 30px 0 40px;
+    padding: 4px;
+    background: #e5e2dc;
+    border-radius: 5px;
+}
+
+.toggle-btn {
+    min-height: 40px;
+    padding: 9px 23px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+    color: #77716a;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #ffffff;
+    color: #202020;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- PLAN CARDS ---------- */
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.plan-card {
+    position: relative;
+    padding: 32px 27px;
+    background: #ffffff;
+    border: 1px solid #dfdcd6;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.featured-plan {
+    border: 2px solid #202020;
+}
+
+.popular {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 5px 8px;
+    background: #202020;
+    color: #ffffff;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.plan-card h2 {
+    margin-bottom: 7px;
+    font-size: 24px;
+}
+
+.plan-description {
+    font-size: 14px;
+}
+
+
+/* ---------- PRICE ---------- */
+
+.price {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: 22px;
+}
+
+.price span {
+    color: #202020;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.price small {
+    color: #77716a;
+    font-size: 13px;
+}
+
+
+/* ---------- FEATURES ---------- */
+
+.features {
+    min-height: 175px;
+    margin: 25px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.features li {
+    margin: 12px 0;
+    color: #55514c;
+    font-size: 14px;
+}
+
+
+/* ---------- BILLING INFORMATION ---------- */
+
+.billing-info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 35px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e0ddd7;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.billing-info strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.billing-info p {
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   SETTINGS PAGE
+===================================================== */
+
+.settings-header {
+    margin-bottom: 30px;
+}
+
+.settings-card {
+    margin-top: 22px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e0ddd7;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.settings-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.settings-card-header h2 {
+    margin-bottom: 5px;
+}
+
+.settings-card-header p {
+    font-size: 14px;
+}
+
+
+/* ---------- AVATAR ---------- */
+
+.avatar-large {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #202020;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* ---------- FORM ---------- */
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #44403b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 14px;
+    border: 1px solid #ccc8c1;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #202020;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #202020;
+    box-shadow: 0 0 0 3px rgba(32, 32, 32, 0.08);
+}
+
+
+/* ---------- SUBSCRIPTION ---------- */
+
+.subscription-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+    padding: 20px;
+    background: #f8f7f4;
+    border: 1px solid #e5e2dc;
+    border-radius: 5px;
+}
+
+.subscription-box h3 {
+    margin-bottom: 4px;
+}
+
+.subscription-box p {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.subscription-box small {
+    color: #88827b;
+    font-size: 12px;
+}
+
+.link-btn {
+    width: auto;
+    flex-shrink: 0;
+}
+
+
+/* ---------- CANCEL BUTTON ---------- */
+
+.danger-btn {
+    min-height: 42px;
+    padding: 10px 17px;
+    border: 1px solid #d7aaaa;
+    border-radius: 4px;
+    background: #fff6f6;
+    color: #b3261e;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.danger-btn:hover {
+    background: #ffe9e9;
+}
+
+
+/* ---------- PREFERENCES ---------- */
+
+.preference-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e7e4de;
+}
+
+.preference-row:last-child {
+    border-bottom: none;
+}
+
+.preference-row strong {
+    font-size: 14px;
+}
+
+.preference-row p {
+    margin-top: 3px;
+    font-size: 13px;
+}
+
+
+/* ---------- TOGGLE SWITCH ---------- */
+
+.switch {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #c9c6c0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease;
+}
+
+.switch input:checked + .slider {
+    background: #202020;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(22px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+    padding: 25px;
+    background: #ffffff;
+    border-top: 1px solid #e3e0da;
+    text-align: center;
+}
+
+.footer p {
+    color: #88827b;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .plans {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .billing-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        min-height: auto;
+        flex-wrap: wrap;
+        padding: 14px 18px;
+        gap: 12px;
+    }
+
+    .profile {
+        margin-left: auto;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 35px 16px 55px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px;
+    }
+
+    .hero .primary-btn {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-card {
+        padding: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .subscription-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .link-btn {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+}
+```

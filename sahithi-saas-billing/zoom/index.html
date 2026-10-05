@@ -1,0 +1,271 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Billing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="zoom-icon">Z</div>
+        <span>Zoom</span>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Overview</a>
+        <a href="pricing.html">Plans</a>
+        <a href="settings.html">Account</a>
+    </nav>
+
+    <div class="account-box">
+        <span>ACCOUNT</span>
+        <strong>Acme Corporation</strong>
+        <small>Business Workspace</small>
+    </div>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+    <div>
+        <p class="eyebrow">BILLING OVERVIEW</p>
+        <h1>Good afternoon 👋</h1>
+        <p class="subtitle">
+            Here's what's happening with your Zoom account.
+        </p>
+    </div>
+
+    <button class="blue-btn" onclick="openPlans()">
+        Manage Plan
+    </button>
+
+</header>
+
+
+<section class="hero-card">
+
+    <div>
+        <span class="plan-label">BUSINESS PLAN</span>
+
+        <h2>
+            Everything your team needs
+            for better meetings.
+        </h2>
+
+        <p>
+            Your account is active and your next payment
+            is scheduled automatically.
+        </p>
+    </div>
+
+    <div class="hero-price">
+        <span>Current monthly bill</span>
+        <strong>$320</strong>
+        <small>40 licensed users</small>
+    </div>
+
+</section>
+
+
+<section class="stats">
+
+    <div class="stat-card">
+        <div class="stat-icon blue">M</div>
+
+        <div>
+            <span>Licensed Users</span>
+            <strong>40</strong>
+            <small>+5 this month</small>
+        </div>
+    </div>
+
+
+    <div class="stat-card">
+        <div class="stat-icon green">✓</div>
+
+        <div>
+            <span>Meetings This Month</span>
+            <strong>186</strong>
+            <small>12% increase</small>
+        </div>
+    </div>
+
+
+    <div class="stat-card">
+        <div class="stat-icon purple">$</div>
+
+        <div>
+            <span>Next Payment</span>
+            <strong>$320</strong>
+            <small>October 20, 2026</small>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="grid">
+
+    <div class="card">
+
+        <div class="card-heading">
+            <div>
+                <p class="eyebrow">CURRENT SUBSCRIPTION</p>
+                <h2>Zoom Business</h2>
+            </div>
+
+            <span class="active-badge">Active</span>
+        </div>
+
+        <p class="muted">
+            Professional video meetings for your growing team.
+        </p>
+
+        <div class="subscription-details">
+
+            <div>
+                <span>Licensed users</span>
+                <strong>40</strong>
+            </div>
+
+            <div>
+                <span>Price per user</span>
+                <strong>$8</strong>
+            </div>
+
+            <div>
+                <span>Billing cycle</span>
+                <strong>Monthly</strong>
+            </div>
+
+        </div>
+
+        <button class="outline-btn" onclick="openPlans()">
+            Change Plan
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-heading">
+
+            <div>
+                <p class="eyebrow">PAYMENT METHOD</p>
+                <h2>Visa ending 4242</h2>
+            </div>
+
+            <div class="card-logo">VISA</div>
+
+        </div>
+
+        <p class="muted">
+            Your payment method will be charged automatically.
+        </p>
+
+        <div class="payment-date">
+            <span>Next payment</span>
+            <strong>October 20, 2026</strong>
+        </div>
+
+        <button class="outline-btn" onclick="updateCard()">
+            Update Payment Method
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="card activity-card">
+
+    <div class="card-heading">
+
+        <div>
+            <p class="eyebrow">RECENT BILLING</p>
+            <h2>Payment history</h2>
+        </div>
+
+        <a href="settings.html">View account</a>
+
+    </div>
+
+
+    <div class="payment-row">
+
+        <div class="payment-left">
+
+            <div class="payment-icon">✓</div>
+
+            <div>
+                <strong>Zoom Business</strong>
+                <span>September 20, 2026</span>
+            </div>
+
+        </div>
+
+        <strong>$320.00</strong>
+
+        <span class="paid">Paid</span>
+
+    </div>
+
+
+    <div class="payment-row">
+
+        <div class="payment-left">
+
+            <div class="payment-icon">✓</div>
+
+            <div>
+                <strong>Zoom Business</strong>
+                <span>August 20, 2026</span>
+            </div>
+
+        </div>
+
+        <strong>$280.00</strong>
+
+        <span class="paid">Paid</span>
+
+    </div>
+
+
+    <div class="payment-row">
+
+        <div class="payment-left">
+
+            <div class="payment-icon">✓</div>
+
+            <div>
+                <strong>Zoom Business</strong>
+                <span>July 20, 2026</span>
+            </div>
+
+        </div>
+
+        <strong>$280.00</strong>
+
+        <span class="paid">Paid</span>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

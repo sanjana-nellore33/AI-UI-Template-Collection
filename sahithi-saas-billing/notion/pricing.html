@@ -1,0 +1,309 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notion - Pricing</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span class="notion-icon">N</span>
+        Notion
+    </a>
+
+
+    <nav class="nav">
+
+        <a href="index.html">
+            Workspace
+        </a>
+
+        <a href="pricing.html" class="active">
+            Pricing
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+
+    <button class="profile" onclick="showProfile()">
+        S
+    </button>
+
+</header>
+
+
+<main class="container pricing-page">
+
+    <section class="pricing-header">
+
+        <p class="eyebrow">
+            PLANS & BILLING
+        </p>
+
+        <h1>
+            Choose the right plan for your team.
+        </h1>
+
+        <p>
+            Upgrade your Notion workspace with more
+            collaboration and advanced features.
+        </p>
+
+
+        <div class="billing-toggle">
+
+            <button
+                id="monthlyBtn"
+                class="toggle-btn active"
+                onclick="setBilling('monthly')">
+
+                Monthly
+
+            </button>
+
+
+            <button
+                id="yearlyBtn"
+                class="toggle-btn"
+                onclick="setBilling('yearly')">
+
+                Yearly
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="plans">
+
+
+        <!-- FREE PLAN -->
+
+        <div class="plan-card">
+
+            <h2>Free</h2>
+
+            <p class="plan-description">
+                For individuals starting out.
+            </p>
+
+
+            <div class="price">
+
+                <span id="freePrice">
+                    ₹0
+                </span>
+
+                <small>
+                    /month
+                </small>
+
+            </div>
+
+
+            <ul class="features">
+
+                <li>✓ Unlimited pages</li>
+
+                <li>✓ Basic collaboration</li>
+
+                <li>✓ 5 MB file uploads</li>
+
+                <li>✓ Basic integrations</li>
+
+            </ul>
+
+
+            <button
+                class="outline-btn"
+                onclick="selectPlan('Free')">
+
+                Current plan
+
+            </button>
+
+        </div>
+
+
+        <!-- PLUS PLAN -->
+
+        <div class="plan-card featured-plan">
+
+            <span class="popular">
+                POPULAR
+            </span>
+
+
+            <h2>
+                Plus
+            </h2>
+
+
+            <p class="plan-description">
+                For small teams and growing projects.
+            </p>
+
+
+            <div class="price">
+
+                <span id="plusPrice">
+                    ₹799
+                </span>
+
+                <small>
+                    /month
+                </small>
+
+            </div>
+
+
+            <ul class="features">
+
+                <li>✓ Unlimited file uploads</li>
+
+                <li>✓ Unlimited collaboration</li>
+
+                <li>✓ 30-day page history</li>
+
+                <li>✓ Advanced integrations</li>
+
+            </ul>
+
+
+            <button
+                class="primary-btn full-btn"
+                onclick="selectPlan('Plus')">
+
+                Upgrade to Plus
+
+            </button>
+
+        </div>
+
+
+        <!-- BUSINESS PLAN -->
+
+        <div class="plan-card">
+
+            <h2>
+                Business
+            </h2>
+
+
+            <p class="plan-description">
+                For companies managing large teams.
+            </p>
+
+
+            <div class="price">
+
+                <span id="businessPrice">
+                    ₹1,299
+                </span>
+
+                <small>
+                    /month
+                </small>
+
+            </div>
+
+
+            <ul class="features">
+
+                <li>✓ Everything in Plus</li>
+
+                <li>✓ Advanced permissions</li>
+
+                <li>✓ Team management</li>
+
+                <li>✓ Priority support</li>
+
+            </ul>
+
+
+            <button
+                class="outline-btn"
+                onclick="selectPlan('Business')">
+
+                Choose Business
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="billing-info">
+
+        <div>
+
+            <strong>
+                Current plan
+            </strong>
+
+            <p>
+                Notion Plus
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Next billing date
+            </strong>
+
+            <p>
+                November 5, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Payment method
+            </strong>
+
+            <p>
+                Visa ending in 4242
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <p>
+        Notion Workspace Demo • SaaS Billing & Pricing
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

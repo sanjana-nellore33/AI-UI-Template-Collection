@@ -1,0 +1,217 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="zoom-icon">Z</div>
+        <span>Zoom</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="pricing.html" class="active">Plans</a>
+        <a href="settings.html">Account</a>
+    </nav>
+
+    <div class="account-box">
+        <span>ACCOUNT</span>
+        <strong>Acme Corporation</strong>
+        <small>Business Workspace</small>
+    </div>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+    <div>
+        <p class="eyebrow">SUBSCRIPTION</p>
+        <h1>Plans & Pricing</h1>
+        <p class="subtitle">
+            Choose the plan that works best for your team.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-link">
+        ← Back to Overview
+    </a>
+
+</header>
+
+
+<div class="billing-switch">
+
+    <button
+        id="monthlyBtn"
+        class="selected"
+        onclick="changeBilling('monthly')">
+        Monthly
+    </button>
+
+    <button
+        id="yearlyBtn"
+        onclick="changeBilling('yearly')">
+        Yearly
+    </button>
+
+</div>
+
+
+<section class="pricing-grid">
+
+
+<div class="price-card">
+
+    <h2>Basic</h2>
+
+    <p>
+        Simple meetings for individuals and small teams.
+    </p>
+
+    <div class="price">
+        <strong>$0</strong>
+        <span>/month</span>
+    </div>
+
+    <button
+        class="outline-btn full"
+        onclick="choosePlan('Basic')">
+        Current Plan
+    </button>
+
+    <ul>
+        <li>✓ 40-minute meetings</li>
+        <li>✓ Up to 100 participants</li>
+        <li>✓ Unlimited meetings</li>
+        <li>✓ Team chat</li>
+    </ul>
+
+</div>
+
+
+<div class="price-card highlighted">
+
+    <span class="recommended">
+        RECOMMENDED
+    </span>
+
+    <h2>Pro</h2>
+
+    <p>
+        Advanced collaboration for professional teams.
+    </p>
+
+    <div class="price">
+        <strong id="proPrice">$13.33</strong>
+        <span>/user/month</span>
+    </div>
+
+    <button
+        class="blue-btn full"
+        onclick="choosePlan('Pro')">
+        Choose Pro
+    </button>
+
+    <ul>
+        <li>✓ Unlimited meeting time</li>
+        <li>✓ Up to 100 participants</li>
+        <li>✓ Cloud recording</li>
+        <li>✓ AI meeting features</li>
+        <li>✓ Advanced reporting</li>
+    </ul>
+
+</div>
+
+
+<div class="price-card">
+
+    <h2>Business</h2>
+
+    <p>
+        Complete meeting tools for growing organizations.
+    </p>
+
+    <div class="price">
+        <strong id="businessPrice">$18.99</strong>
+        <span>/user/month</span>
+    </div>
+
+    <button
+        class="outline-btn full"
+        onclick="choosePlan('Business')">
+        Choose Business
+    </button>
+
+    <ul>
+        <li>✓ Everything in Pro</li>
+        <li>✓ Up to 300 participants</li>
+        <li>✓ Company branding</li>
+        <li>✓ Admin dashboard</li>
+        <li>✓ Dedicated support</li>
+    </ul>
+
+</div>
+
+</section>
+
+
+<section class="comparison">
+
+    <h2>Plan comparison</h2>
+
+    <div class="comparison-row header">
+        <span>Feature</span>
+        <span>Basic</span>
+        <span>Pro</span>
+        <span>Business</span>
+    </div>
+
+    <div class="comparison-row">
+        <span>Meeting duration</span>
+        <span>40 min</span>
+        <span>30 hours</span>
+        <span>30 hours</span>
+    </div>
+
+    <div class="comparison-row">
+        <span>Participants</span>
+        <span>100</span>
+        <span>100</span>
+        <span>300</span>
+    </div>
+
+    <div class="comparison-row">
+        <span>Cloud recording</span>
+        <span>—</span>
+        <span>✓</span>
+        <span>✓</span>
+    </div>
+
+    <div class="comparison-row">
+        <span>Admin controls</span>
+        <span>Basic</span>
+        <span>Advanced</span>
+        <span>Advanced</span>
+    </div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

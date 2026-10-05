@@ -1,0 +1,380 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Notion - Settings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+
+        <span class="notion-icon">
+            N
+        </span>
+
+        Notion
+
+    </a>
+
+
+    <nav class="nav">
+
+        <a href="index.html">
+            Workspace
+        </a>
+
+        <a href="pricing.html">
+            Pricing
+        </a>
+
+        <a href="settings.html" class="active">
+            Settings
+        </a>
+
+    </nav>
+
+
+    <button
+        class="profile"
+        onclick="showProfile()">
+
+        S
+
+    </button>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <section class="settings-header">
+
+        <p class="eyebrow">
+            ACCOUNT
+        </p>
+
+        <h1>
+            Settings
+        </h1>
+
+        <p>
+            Manage your profile, subscription and
+            workspace preferences.
+        </p>
+
+    </section>
+
+
+
+    <!-- PROFILE -->
+
+    <section class="settings-card">
+
+        <div class="settings-card-header">
+
+            <div>
+
+                <h2>
+                    Profile information
+                </h2>
+
+                <p>
+                    Update your personal information.
+                </p>
+
+            </div>
+
+
+            <div class="avatar-large">
+                S
+            </div>
+
+        </div>
+
+
+
+        <form id="profileForm">
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        value="Sahithi Padarthi"
+                        placeholder="Enter your name">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        value="sahithi@example.com"
+                        placeholder="Enter your email">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="workspace">
+                    Workspace name
+                </label>
+
+                <input
+                    type="text"
+                    id="workspace"
+                    value="Sahithi's Workspace"
+                    placeholder="Enter workspace name">
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="primary-btn">
+
+                Save changes
+
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+
+    <!-- SUBSCRIPTION -->
+
+    <section class="settings-card">
+
+        <div class="settings-card-header">
+
+            <div>
+
+                <h2>
+                    Subscription
+                </h2>
+
+                <p>
+                    Manage your current Notion plan.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="subscription-box">
+
+            <div>
+
+                <h3>
+                    Plus Plan
+                </h3>
+
+                <p>
+                    ₹799 / month
+                </p>
+
+                <small>
+                    Renews on November 5, 2026
+                </small>
+
+            </div>
+
+
+            <a
+                href="pricing.html"
+                class="outline-btn link-btn">
+
+                Change plan
+
+            </a>
+
+        </div>
+
+
+
+        <button
+            class="danger-btn"
+            onclick="cancelPlan()">
+
+            Cancel subscription
+
+        </button>
+
+    </section>
+
+
+
+    <!-- PREFERENCES -->
+
+    <section class="settings-card">
+
+        <div class="settings-card-header">
+
+            <div>
+
+                <h2>
+                    Preferences
+                </h2>
+
+                <p>
+                    Control your workspace notifications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="preference-row">
+
+            <div>
+
+                <strong>
+                    Email notifications
+                </strong>
+
+                <p>
+                    Receive updates about your workspace.
+                </p>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="notifications"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+
+        <div class="preference-row">
+
+            <div>
+
+                <strong>
+                    Workspace activity alerts
+                </strong>
+
+                <p>
+                    Get notified about important changes.
+                </p>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="activityAlerts"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+
+        <div class="preference-row">
+
+            <div>
+
+                <strong>
+                    Product updates
+                </strong>
+
+                <p>
+                    Receive news about new Notion features.
+                </p>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="marketing">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer class="footer">
+
+    <p>
+        Notion Workspace Demo • SaaS Billing & Pricing
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

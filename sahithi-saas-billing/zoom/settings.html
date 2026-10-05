@@ -1,0 +1,231 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Account Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="zoom-icon">Z</div>
+        <span>Zoom</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="pricing.html">Plans</a>
+        <a href="settings.html" class="active">Account</a>
+    </nav>
+
+    <div class="account-box">
+        <span>ACCOUNT</span>
+        <strong>Acme Corporation</strong>
+        <small>Business Workspace</small>
+    </div>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+    <div>
+        <p class="eyebrow">ACCOUNT</p>
+        <h1>Account Settings</h1>
+        <p class="subtitle">
+            Manage your organization and billing preferences.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-link">
+        ← Overview
+    </a>
+
+</header>
+
+
+<section class="settings-card">
+
+    <div class="section-title">
+
+        <h2>Organization details</h2>
+
+        <p>
+            Update the basic information for your Zoom account.
+        </p>
+
+    </div>
+
+
+    <div class="form-grid">
+
+        <div class="form-group">
+
+            <label>Organization name</label>
+
+            <input
+                type="text"
+                id="companyName"
+                value="Acme Corporation">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Admin email</label>
+
+            <input
+                type="email"
+                value="admin@acmecorp.com">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Industry</label>
+
+            <select>
+
+                <option>Technology</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Finance</option>
+                <option>Marketing</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Company size</label>
+
+            <select>
+
+                <option>1-50 employees</option>
+                <option>51-200 employees</option>
+                <option>201-500 employees</option>
+                <option>500+ employees</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <button class="blue-btn" onclick="saveAccount()">
+        Save Changes
+    </button>
+
+</section>
+
+
+<section class="settings-card">
+
+    <div class="section-title">
+
+        <h2>Billing preferences</h2>
+
+        <p>
+            Manage how your organization is billed.
+        </p>
+
+    </div>
+
+
+    <div class="setting-line">
+
+        <div>
+
+            <strong>Current plan</strong>
+
+            <p>
+                Zoom Business · 40 users
+            </p>
+
+        </div>
+
+        <a href="pricing.html" class="outline-btn">
+            Change
+        </a>
+
+    </div>
+
+
+    <div class="setting-line">
+
+        <div>
+
+            <strong>Payment method</strong>
+
+            <p>
+                Visa ending in 4242
+            </p>
+
+        </div>
+
+        <button
+            class="outline-btn"
+            onclick="updateCard()">
+            Update
+        </button>
+
+    </div>
+
+
+    <div class="setting-line">
+
+        <div>
+
+            <strong>Billing cycle</strong>
+
+            <p>
+                Monthly · Next payment October 20, 2026
+            </p>
+
+        </div>
+
+        <span class="active-badge">
+            Active
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="danger-card">
+
+    <h2>Cancel subscription</h2>
+
+    <p>
+        Cancelling your subscription will remove access
+        to paid Zoom features at the end of your billing cycle.
+    </p>
+
+    <button
+        class="danger-btn"
+        onclick="cancelSubscription()">
+        Cancel Subscription
+    </button>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

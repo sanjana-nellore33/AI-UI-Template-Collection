@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Canva - Pricing</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <a href="index.html" class="logo">
+      Canva<span>+</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Dashboard</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <button class="profile" type="button">
+      S
+    </button>
+
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main class="container pricing-page">
+
+    <section class="pricing-header">
+
+      <p class="eyebrow">
+        PLANS & BILLING
+      </p>
+
+      <h1>
+        Choose the perfect plan
+      </h1>
+
+      <p>
+        Upgrade your creative workspace
+        whenever you need more.
+      </p>
+
+    </section>
+
+
+    <!-- Billing Toggle -->
+
+    <div class="billing-toggle">
+
+      <button
+        id="monthlyBtn"
+        class="toggle-btn active"
+        type="button"
+        onclick="setBilling('monthly')"
+      >
+        Monthly
+      </button>
+
+      <button
+        id="yearlyBtn"
+        class="toggle-btn"
+        type="button"
+        onclick="setBilling('yearly')"
+      >
+        Yearly
+      </button>
+
+    </div>
+
+
+    <!-- Pricing Cards -->
+
+    <section class="plans">
+
+
+      <!-- FREE -->
+
+      <article class="plan-card">
+
+        <h2>
+          Free
+        </h2>
+
+        <p class="plan-description">
+          For personal projects
+        </p>
+
+        <div class="price">
+
+          <span id="freePrice">
+            ₹0
+          </span>
+
+          <small>
+            / month
+          </small>
+
+        </div>
+
+        <ul class="features">
+
+          <li>✓ 1 GB storage</li>
+
+          <li>✓ Basic templates</li>
+
+          <li>✓ Basic editor</li>
+
+          <li>✓ Standard support</li>
+
+        </ul>
+
+        <button
+          class="outline-btn"
+          type="button"
+          onclick="selectPlan('Free')"
+        >
+          Current plan
+        </button>
+
+      </article>
+
+
+      <!-- PRO -->
+
+      <article class="plan-card featured-plan">
+
+        <span class="popular">
+          MOST POPULAR
+        </span>
+
+        <h2>
+          Pro
+        </h2>
+
+        <p class="plan-description">
+          For creators & professionals
+        </p>
+
+        <div class="price">
+
+          <span id="proPrice">
+            ₹499
+          </span>
+
+          <small>
+            / month
+          </small>
+
+        </div>
+
+        <ul class="features">
+
+          <li>✓ 100 GB storage</li>
+
+          <li>✓ Premium templates</li>
+
+          <li>✓ Background remover</li>
+
+          <li>✓ Brand Kit</li>
+
+          <li>✓ Premium content</li>
+
+        </ul>
+
+        <button
+          class="primary-btn full-btn"
+          type="button"
+          onclick="selectPlan('Pro')"
+        >
+          Upgrade to Pro
+        </button>
+
+      </article>
+
+
+      <!-- TEAMS -->
+
+      <article class="plan-card">
+
+        <h2>
+          Teams
+        </h2>
+
+        <p class="plan-description">
+          For growing teams
+        </p>
+
+        <div class="price">
+
+          <span id="teamsPrice">
+            ₹999
+          </span>
+
+          <small>
+            / month
+          </small>
+
+        </div>
+
+        <ul class="features">
+
+          <li>✓ Everything in Pro</li>
+
+          <li>✓ Team collaboration</li>
+
+          <li>✓ Advanced permissions</li>
+
+          <li>✓ Team templates</li>
+
+          <li>✓ Priority support</li>
+
+        </ul>
+
+        <button
+          class="outline-btn"
+          type="button"
+          onclick="selectPlan('Teams')"
+        >
+          Choose Teams
+        </button>
+
+      </article>
+
+    </section>
+
+
+    <!-- Billing Information -->
+
+    <section class="billing-info">
+
+      <div>
+        <strong>
+          Secure billing
+        </strong>
+
+        <p>
+          Your subscription information is protected.
+        </p>
+      </div>
+
+      <div>
+        <strong>
+          Cancel anytime
+        </strong>
+
+        <p>
+          No long-term commitment required.
+        </p>
+      </div>
+
+      <div>
+        <strong>
+          Instant upgrade
+        </strong>
+
+        <p>
+          Get access to premium features immediately.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <p>
+      Canva+ UI Demo · SaaS Billing & Pricing
+    </p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
