@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Chat - Answer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <div class="sidebar-header">
+
+
+            <div class="logo">
+                ✦ AI Chat
+            </div>
+
+
+            <button
+                class="close-btn"
+                onclick="toggleSidebar()"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+        <!-- NEW CHAT -->
+
+        <button
+            class="new-chat"
+            onclick="newChat()"
+        >
+            + New Chat
+        </button>
+
+
+        <!-- DYNAMIC HISTORY -->
+
+        <div
+            class="history"
+            id="history"
+        >
+
+            <p>
+                Recent Chats
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+
+            <div>
+                ⚙ Settings
+            </div>
+
+
+            <div>
+                ❓ Help
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        onclick="toggleSidebar()"
+    ></div>
+
+
+    <!-- MAIN AREA -->
+
+    <main class="chat-area">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <button
+                    class="menu-btn"
+                    onclick="toggleSidebar()"
+                >
+                    ☰
+                </button>
+
+
+                <span>
+                    AI Chat
+                </span>
+
+
+            </div>
+
+
+            <button
+                class="upgrade-btn"
+                onclick="location.href='upgrade.html'"
+            >
+                Upgrade
+            </button>
+
+
+        </header>
+
+
+        <!-- ANSWER CONTENT -->
+
+        <div class="answer-content">
+
+
+            <!-- HEADER -->
+
+            <div class="answer-header">
+
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+
+                <h1>
+                    AI Response
+                </h1>
+
+
+                <p>
+                    Your conversation with AI
+                </p>
+
+
+            </div>
+
+
+            <!-- CONVERSATION -->
+
+            <div class="conversation">
+
+
+                <!-- USER -->
+
+                <div class="prompt-card">
+
+
+                    <div class="card-label">
+                        You
+                    </div>
+
+
+                    <div
+                        class="prompt-text"
+                        id="selectedPrompt"
+                    >
+                        Select a conversation from
+                        Recent Chats.
+                    </div>
+
+
+                </div>
+
+
+                <!-- AI -->
+
+                <div class="response-card">
+
+
+                    <div class="card-label">
+                        ✦ AI
+                    </div>
+
+
+                    <div
+                        class="response-text"
+                        id="selectedAnswer"
+                    >
+
+                        Select a conversation from
+                        the sidebar to view the
+                        AI response.
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="response-actions">
+
+
+                        <button
+                            onclick="likeResponse()"
+                        >
+                            👍
+                        </button>
+
+
+                        <button
+                            onclick="dislikeResponse()"
+                        >
+                            👎
+                        </button>
+
+
+                        <button
+                            onclick="shareResponse()"
+                        >
+                            ↗ Share
+                        </button>
+
+
+                        <button
+                            onclick="copyResponse()"
+                        >
+                            ⧉ Copy
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- FOLLOW-UP -->
+
+            <div class="another-prompt">
+
+
+                <input
+                    type="text"
+                    id="answerInput"
+                    placeholder="Ask a follow-up question..."
+                    onkeydown="handleAnswerEnter(event)"
+                >
+
+
+                <button
+                    onclick="sendAnswerPrompt()"
+                >
+                    ➤
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- SHARED JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

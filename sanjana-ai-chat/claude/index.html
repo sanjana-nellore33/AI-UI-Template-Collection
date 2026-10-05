@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <span>Claude</span>
+        </div>
+
+        <button class="new-chat" onclick="createNewChat()">
+            <span>＋</span> New chat
+        </button>
+
+        <div class="sidebar-title">Recent</div>
+
+        <div id="historyList" class="history-list"></div>
+
+        <div class="sidebar-bottom">
+            <button onclick="showMessage('Settings')">⚙ <span>Settings</span></button>
+            <button onclick="showMessage('Help & Support')">❓ <span>Help</span></button>
+            <button onclick="showMessage('Account')">👤 <span>Account</span></button>
+        </div>
+
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <main class="main">
+
+        <header class="topbar">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+            <div class="page-title">
+                <span>Claude</span>
+            </div>
+
+            <button class="upgrade-btn" onclick="openUpgrade()">
+                Upgrade
+            </button>
+        </header>
+
+        <section class="home-content">
+
+            <div class="welcome-section">
+
+                <div class="claude-logo">✦</div>
+
+                <h1>How can I help you today?</h1>
+
+                <p class="subtitle">
+                    Ask Claude to write, analyze, learn, brainstorm, or solve problems.
+                </p>
+
+                <div class="prompt-cards">
+
+                    <button onclick="usePrompt('Explain artificial intelligence in simple words')">
+                        <span class="card-icon">✦</span>
+                        <div>
+                            <strong>Learn something</strong>
+                            <small>Explain a difficult topic simply</small>
+                        </div>
+                    </button>
+
+                    <button onclick="usePrompt('Give me some college project ideas')">
+                        <span class="card-icon">💡</span>
+                        <div>
+                            <strong>Brainstorm ideas</strong>
+                            <small>Generate creative project ideas</small>
+                        </div>
+                    </button>
+
+                    <button onclick="usePrompt('Help me write a professional email')">
+                        <span class="card-icon">✎</span>
+                        <div>
+                            <strong>Write something</strong>
+                            <small>Create or improve your writing</small>
+                        </div>
+                    </button>
+
+                    <button onclick="usePrompt('Explain Python programming for beginners')">
+                        <span class="card-icon">⌘</span>
+                        <div>
+                            <strong>Help with code</strong>
+                            <small>Understand programming concepts</small>
+                        </div>
+                    </button>
+
+                </div>
+
+                <div class="composer">
+
+                    <textarea
+                        id="promptInput"
+                        placeholder="Message Claude..."
+                        rows="1"
+                    ></textarea>
+
+                    <div class="composer-bottom">
+
+                        <span class="disclaimer">
+                            Claude can make mistakes. Check important information.
+                        </span>
+
+                        <button class="send-button" onclick="sendMessage()">
+                            ↑
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

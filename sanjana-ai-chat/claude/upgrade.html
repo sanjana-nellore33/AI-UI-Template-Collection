@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude - Upgrade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <span>Claude</span>
+        </div>
+
+        <button class="new-chat" onclick="goHome()">
+            ← Back to chat
+        </button>
+
+        <div class="sidebar-bottom">
+            <button onclick="showMessage('Settings')">⚙ <span>Settings</span></button>
+            <button onclick="showMessage('Help & Support')">❓ <span>Help</span></button>
+            <button onclick="showMessage('Account')">👤 <span>Account</span></button>
+        </div>
+
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+            <div class="page-title">
+                <span>Claude</span>
+            </div>
+
+        </header>
+
+        <section class="upgrade-section">
+
+            <div class="upgrade-header">
+
+                <div class="claude-logo">✦</div>
+
+                <h1>Choose your Claude plan</h1>
+
+                <p>
+                    Get more access to Claude and unlock additional features.
+                </p>
+
+            </div>
+
+            <div class="plans">
+
+                <div class="plan-card">
+
+                    <h2>Free</h2>
+
+                    <p class="price">
+                        ₹0 <span>/ month</span>
+                    </p>
+
+                    <p class="plan-description">
+                        Basic AI assistance for everyday tasks.
+                    </p>
+
+                    <ul>
+                        <li>✓ Basic Claude access</li>
+                        <li>✓ Standard conversations</li>
+                        <li>✓ Writing assistance</li>
+                        <li>✓ Coding assistance</li>
+                        <li>✓ Basic file analysis</li>
+                    </ul>
+
+                    <button class="plan-button current">
+                        Current plan
+                    </button>
+
+                </div>
+
+                <div class="plan-card featured">
+
+                    <div class="popular">POPULAR</div>
+
+                    <h2>Claude Pro</h2>
+
+                    <p class="price">
+                        ₹1,650 <span>/ month</span>
+                    </p>
+
+                    <p class="plan-description">
+                        More access for demanding AI workflows.
+                    </p>
+
+                    <ul>
+                        <li>✓ More messages</li>
+                        <li>✓ Priority access</li>
+                        <li>✓ Advanced models</li>
+                        <li>✓ Larger conversations</li>
+                        <li>✓ Extended usage</li>
+                        <li>✓ Early feature access</li>
+                    </ul>
+
+                    <button class="plan-button" onclick="upgradeDemo()">
+                        Upgrade to Pro
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

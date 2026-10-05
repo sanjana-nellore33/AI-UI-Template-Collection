@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perplexity - AI Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="logo">◉</div>
+            <span>Perplexity</span>
+        </div>
+
+        <button class="new-search" onclick="createNewSearch()">
+            <span>＋</span>
+            New search
+        </button>
+
+        <div class="sidebar-section">
+
+            <div class="section-title">Recent searches</div>
+
+            <div id="historyList"></div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <button onclick="showMessage('Discover opened')">
+                ✦ Discover
+            </button>
+
+            <button onclick="showMessage('Settings opened')">
+                ⚙ Settings
+            </button>
+
+            <button onclick="showMessage('Help opened')">
+                ? Help
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div class="model-name">
+                <span class="mini-logo">◉</span>
+                Perplexity
+            </div>
+
+            <button class="upgrade-btn" onclick="openUpgrade()">
+                Upgrade
+            </button>
+
+        </header>
+
+
+        <section class="home">
+
+            <div class="hero">
+
+                <div class="hero-logo">
+                    ◉
+                </div>
+
+                <h1>Ask anything. Discover everything.</h1>
+
+                <p>
+                    Search the web with AI and get clear answers with sources.
+                </p>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <textarea
+                    id="searchInput"
+                    placeholder="Ask a question or search the web..."
+                    rows="2"
+                    onkeydown="handleEnter(event)"
+                ></textarea>
+
+                <div class="search-footer">
+
+                    <div class="search-tools">
+
+                        <button onclick="showMessage('Web search enabled')">
+                            ◉ Web
+                        </button>
+
+                        <button onclick="showMessage('Sources will be included')">
+                            ＋ Sources
+                        </button>
+
+                    </div>
+
+                    <button class="search-btn" onclick="searchQuestion()">
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-cards">
+
+                <button
+                    class="research-card"
+                    onclick="usePrompt('What are the latest trends in artificial intelligence?')"
+                >
+                    <div class="card-icon">✦</div>
+
+                    <div>
+                        <strong>Research a topic</strong>
+                        <span>Explore a subject with sources</span>
+                    </div>
+                </button>
+
+
+                <button
+                    class="research-card"
+                    onclick="usePrompt('Compare Python and JavaScript for beginners')"
+                >
+                    <div class="card-icon">⇄</div>
+
+                    <div>
+                        <strong>Compare options</strong>
+                        <span>Find differences and recommendations</span>
+                    </div>
+                </button>
+
+
+                <button
+                    class="research-card"
+                    onclick="usePrompt('Explain how machine learning works')"
+                >
+                    <div class="card-icon">⌕</div>
+
+                    <div>
+                        <strong>Understand a concept</strong>
+                        <span>Get a simple research-based explanation</span>
+                    </div>
+                </button>
+
+
+                <button
+                    class="research-card"
+                    onclick="usePrompt('What are the best study techniques for college students?')"
+                >
+                    <div class="card-icon">▣</div>
+
+                    <div>
+                        <strong>Find useful information</strong>
+                        <span>Discover practical answers quickly</span>
+                    </div>
+                </button>
+
+            </div>
+
+
+            <div class="quick-searches">
+
+                <button onclick="usePrompt('Latest technology news')">
+                    Technology
+                </button>
+
+                <button onclick="usePrompt('Latest AI developments')">
+                    AI research
+                </button>
+
+                <button onclick="usePrompt('Best programming languages to learn')">
+                    Programming
+                </button>
+
+                <button onclick="usePrompt('Latest science discoveries')">
+                    Science
+                </button>
+
+            </div>
+
+
+            <p class="disclaimer">
+                Perplexity demo interface. Search results are simulated for this UI project.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div
+    class="mobile-overlay"
+    id="overlay"
+    onclick="toggleSidebar()"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

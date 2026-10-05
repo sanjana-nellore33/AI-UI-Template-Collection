@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perplexity - Research Answer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="logo">◉</div>
+            <span>Perplexity</span>
+        </div>
+
+        <button class="new-search" onclick="createNewSearch()">
+            <span>＋</span>
+            New search
+        </button>
+
+        <div class="sidebar-section">
+
+            <div class="section-title">
+                Recent searches
+            </div>
+
+            <div id="historyList"></div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <button onclick="showMessage('Discover opened')">
+                ✦ Discover
+            </button>
+
+            <button onclick="showMessage('Settings opened')">
+                ⚙ Settings
+            </button>
+
+            <button onclick="showMessage('Help opened')">
+                ? Help
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div class="model-name">
+                <span class="mini-logo">◉</span>
+                Perplexity
+            </div>
+
+            <button class="upgrade-btn" onclick="openUpgrade()">
+                Upgrade
+            </button>
+
+        </header>
+
+
+        <section class="answer-page">
+
+            <div class="answer-container">
+
+                <button class="back-btn" onclick="goHome()">
+                    ← Back to search
+                </button>
+
+
+                <div class="answer-heading">
+
+                    <div class="answer-mode">
+                        <span>◉</span>
+                        AI Search
+                    </div>
+
+                    <h1 id="answerTitle">
+                        Research Answer
+                    </h1>
+
+                </div>
+
+
+                <div id="conversationMessages"></div>
+
+
+                <div class="related-section">
+
+                    <h2>Related questions</h2>
+
+                    <div id="relatedQuestions"></div>
+
+                </div>
+
+
+                <div class="followup-box">
+
+                    <textarea
+                        id="followupInput"
+                        placeholder="Ask a follow-up question..."
+                        rows="2"
+                        onkeydown="handleFollowupEnter(event)"
+                    ></textarea>
+
+                    <button onclick="sendFollowUp()">
+                        Search →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div
+    class="mobile-overlay"
+    id="overlay"
+    onclick="toggleSidebar()"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

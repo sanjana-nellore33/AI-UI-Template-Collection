@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gemini</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-top">
+
+            <div class="brand">
+
+                <div class="gemini-logo">
+                    ✦
+                </div>
+
+                <span>
+                    Gemini
+                </span>
+
+            </div>
+
+
+            <button
+                class="close-btn"
+                onclick="toggleSidebar()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <button
+            class="new-chat"
+            onclick="newChat()"
+        >
+            <span>＋</span>
+            New chat
+        </button>
+
+
+        <div class="history" id="history">
+
+            <p class="history-title">
+                Recent
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="side-item">
+                ✨ Explore Gemini
+            </div>
+
+            <div class="side-item">
+                ⚙ Settings
+            </div>
+
+            <div class="side-item">
+                ❓ Help
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        onclick="toggleSidebar()"
+    ></div>
+
+
+    <!-- MAIN -->
+
+    <main class="main-area">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="top-left">
+
+                <button
+                    class="menu-btn"
+                    onclick="toggleSidebar()"
+                >
+                    ☰
+                </button>
+
+
+                <div class="model-name">
+                    Gemini
+                    <span>⌄</span>
+                </div>
+
+            </div>
+
+
+            <button
+                class="profile-button"
+                onclick="location.href='upgrade.html'"
+            >
+                Upgrade
+            </button>
+
+        </header>
+
+
+        <!-- CHAT -->
+
+        <section class="chat-area">
+
+
+            <div
+                class="welcome"
+                id="welcome"
+            >
+
+                <div class="large-gemini-logo">
+                    ✦
+                </div>
+
+
+                <h1>
+                    Hello, Sanjana
+                </h1>
+
+
+                <h2>
+                    How can I help you today?
+                </h2>
+
+
+                <p>
+                    Ask questions, create content,
+                    learn something new, or explore ideas.
+                </p>
+
+
+                <!-- PROMPT CARDS -->
+
+                <div class="prompt-cards">
+
+
+                    <button
+                        onclick="usePrompt('Explain artificial intelligence simply')"
+                    >
+
+                        <span class="card-icon">
+                            ✨
+                        </span>
+
+                        <span>
+                            Explain AI simply
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        onclick="usePrompt('Give me college project ideas')"
+                    >
+
+                        <span class="card-icon">
+                            💡
+                        </span>
+
+                        <span>
+                            Give me project ideas
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        onclick="usePrompt('Help me create a study plan')"
+                    >
+
+                        <span class="card-icon">
+                            📚
+                        </span>
+
+                        <span>
+                            Create a study plan
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        onclick="usePrompt('Help me write a professional email')"
+                    >
+
+                        <span class="card-icon">
+                            ✍
+                        </span>
+
+                        <span>
+                            Write an email
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGES -->
+
+            <div
+                id="messages"
+                class="messages"
+            ></div>
+
+
+        </section>
+
+
+        <!-- PROMPT AREA -->
+
+        <div class="prompt-section">
+
+
+            <div class="prompt-box">
+
+
+                <button
+                    class="add-btn"
+                    title="Add"
+                >
+                    ＋
+                </button>
+
+
+                <input
+                    type="text"
+                    id="promptInput"
+                    placeholder="Enter a prompt for Gemini"
+                    autocomplete="off"
+                    onkeydown="handleEnter(event)"
+                >
+
+
+                <button
+                    class="mic-btn"
+                    title="Voice"
+                >
+                    🎙
+                </button>
+
+
+                <button
+                    class="send-btn"
+                    onclick="sendMessage()"
+                    title="Send"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <p class="disclaimer">
+                Gemini may display inaccurate information,
+                so double-check its responses.
+            </p>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

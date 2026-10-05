@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copilot - Answer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="logo">✦</div>
+            <span>Copilot</span>
+        </div>
+
+        <button class="new-chat" onclick="createNewChat()">
+            <span>＋</span>
+            New chat
+        </button>
+
+        <div class="sidebar-section">
+            <div class="section-title">Recent</div>
+            <div id="historyList"></div>
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <button onclick="showMessage('Settings opened')">
+                ⚙ Settings
+            </button>
+
+            <button onclick="showMessage('Help opened')">
+                ? Help
+            </button>
+
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+            <div class="model-name">
+                <span class="mini-logo">✦</span>
+                Copilot
+            </div>
+
+            <button class="upgrade-btn" onclick="openUpgrade()">
+                Upgrade
+            </button>
+
+        </header>
+
+        <section class="answer-page">
+
+            <div class="answer-container">
+
+                <button class="back-btn" onclick="goHome()">
+                    ← Back to Copilot
+                </button>
+
+                <h1 id="answerTitle">Coding Answer</h1>
+
+                <div id="conversationMessages"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div class="mobile-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
