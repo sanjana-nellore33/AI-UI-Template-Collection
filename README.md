@@ -95,6 +95,9 @@ AI-UI-Template-Collection/
 │   └── atlassian/
 │
 └── README.md
+
+
+
 🔄 GitHub Collaboration Workflow
 
 The team followed the GitHub collaboration workflow:
@@ -121,6 +124,8 @@ Each team member worked on a separate branch and submitted their work through Pu
 
 The Pull Requests were reviewed and approved before being merged into the main branch.
 
+
+
 🚀 How to Run
 Clone the repository.
 Open the required application folder.
@@ -130,6 +135,8 @@ Navigate through the available pages and interactions.
 Example:
 
 sanjana-ai-chat/chatgpt/index.html
+
+
 ✨ Project Features
 Modern UI designs
 Responsive layouts
@@ -139,12 +146,16 @@ HTML, CSS and JavaScript implementation
 Organized folder structure
 Team-based GitHub workflow
 Pull Request and code review process
+
+
 📊 Project Summary
 Team Members: 4
 Categories: 4
 Applications: 20
 Technologies: HTML, CSS, JavaScript
 Repository: GitHub
+
+
 👩‍💻 Individual Contributions
 Sanjana
 
@@ -166,6 +177,8 @@ Harshith
 Developed five SaaS account and settings templates:
 GitHub, Discord, Figma, Trello and Atlassian.
 
+
+
 🎯 Conclusion
 
 The project demonstrates both modern UI development and practical GitHub team collaboration.
@@ -173,19 +186,3 @@ The project demonstrates both modern UI development and practical GitHub team co
 The final collection contains 20 UI templates across four categories, developed collaboratively using branches, commits, Pull Requests, code reviews and merges.
 
 
-### Step 14
-
-After pasting, **don't click anything else yet**.
-
-Scroll to the bottom and click:
-
-**Commit changes**
-
-Then choose:
-
-**Commit directly to the `main` branch**
-
-Commit message:
-
-```text
-Update project README
