@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #171923;
+}
+
+header {
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #e8eaf0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555b6e;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #635bff;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    background:
+        radial-gradient(circle at 85% 20%, #dcd8ff 0, transparent 28%),
+        radial-gradient(circle at 15% 80%, #dff8f2 0, transparent 30%),
+        #f7f8fc;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.tag,
+.section-heading p {
+    color: #635bff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #635bff;
+}
+
+.hero p:not(.tag) {
+    max-width: 600px;
+    color: #626878;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: #171923;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-btn:hover {
+    background: #635bff;
+}
+
+.categories,
+.templates {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.category-card {
+    padding: 30px;
+    min-height: 260px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #e6e8ef;
+    transition: 0.25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(20, 25, 45, 0.1);
+}
+
+.icon {
+    font-size: 38px;
+    margin-bottom: 22px;
+}
+
+.category-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.category-card p {
+    color: #6a6f7d;
+    line-height: 1.6;
+    min-height: 52px;
+    margin-bottom: 22px;
+}
+
+.category-card button {
+    border: none;
+    background: #171923;
+    color: white;
+    padding: 11px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.category-card button:hover {
+    background: #635bff;
+}
+
+.templates {
+    background: white;
+}
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.template-card {
+    padding: 25px;
+    min-height: 245px;
+    border-radius: 18px;
+    background: #f8f9fc;
+    border: 1px solid #e5e7ee;
+    transition: 0.25s ease;
+}
+
+.template-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(20, 25, 45, 0.1);
+}
+
+.template-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: white;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.template-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.template-card p {
+    color: #6a6f7d;
+    line-height: 1.5;
+    min-height: 48px;
+    margin-bottom: 18px;
+}
+
+.template-card a {
+    text-decoration: none;
+    color: #635bff;
+    font-weight: 800;
+}
+
+.template-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 45px 7%;
+    text-align: center;
+    background: #171923;
+    color: white;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aeb2c0;
+}
+
+@media (max-width: 1000px) {
+    .category-grid,
+    .template-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .categories,
+    .templates {
+        padding: 65px 5%;
+    }
+
+    .category-grid,
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+}
