@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropbox - Pricing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      Dropbox
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Dashboard</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <button class="profile" type="button" onclick="showProfile()">
+      S
+    </button>
+
+  </header>
+
+
+  <main class="container pricing-page">
+
+    <section class="pricing-header">
+
+      <p class="eyebrow">PLANS &amp; BILLING</p>
+
+      <h1>Choose your Dropbox plan</h1>
+
+      <p>
+        More space, better collaboration
+        and powerful tools for your files.
+      </p>
+
+    </section>
+
+
+    <div class="billing-toggle">
+
+      <button
+        id="monthlyBtn"
+        class="toggle-btn active"
+        type="button"
+        onclick="setBilling('monthly')"
+      >
+        Monthly
+      </button>
+
+      <button
+        id="yearlyBtn"
+        class="toggle-btn"
+        type="button"
+        onclick="setBilling('yearly')"
+      >
+        Yearly
+      </button>
+
+    </div>
+
+
+    <section class="plans">
+
+
+      <article class="plan-card">
+
+        <h2>Basic</h2>
+
+        <p class="plan-description">
+          For simple personal storage
+        </p>
+
+        <div class="price">
+          <span id="basicPrice">₹0</span>
+          <small>/ month</small>
+        </div>
+
+        <ul class="features">
+          <li>✓ 2 GB storage</li>
+          <li>✓ File sharing</li>
+          <li>✓ Basic file recovery</li>
+          <li>✓ Secure file access</li>
+        </ul>
+
+        <button
+          class="outline-btn"
+          type="button"
+          onclick="selectPlan('Basic')"
+        >
+          Current plan
+        </button>
+
+      </article>
+
+
+      <article class="plan-card featured-plan">
+
+        <span class="popular">MOST POPULAR</span>
+
+        <h2>Plus</h2>
+
+        <p class="plan-description">
+          For individuals with larger storage needs
+        </p>
+
+        <div class="price">
+          <span id="plusPrice">₹999</span>
+          <small>/ month</small>
+        </div>
+
+        <ul class="features">
+          <li>✓ 2 TB storage</li>
+          <li>✓ Advanced sharing</li>
+          <li>✓ File recovery</li>
+          <li>✓ Offline access</li>
+          <li>✓ Priority support</li>
+        </ul>
+
+        <button
+          class="primary-btn full-btn"
+          type="button"
+          onclick="selectPlan('Plus')"
+        >
+          Upgrade to Plus
+        </button>
+
+      </article>
+
+
+      <article class="plan-card">
+
+        <h2>Professional</h2>
+
+        <p class="plan-description">
+          For professionals and creators
+        </p>
+
+        <div class="price">
+          <span id="professionalPrice">₹1,499</span>
+          <small>/ month</small>
+        </div>
+
+        <ul class="features">
+          <li>✓ 3 TB storage</li>
+          <li>✓ Advanced sharing controls</li>
+          <li>✓ Document insights</li>
+          <li>✓ Large file transfers</li>
+          <li>✓ Priority support</li>
+        </ul>
+
+        <button
+          class="outline-btn"
+          type="button"
+          onclick="selectPlan('Professional')"
+        >
+          Choose Professional
+        </button>
+
+      </article>
+
+    </section>
+
+
+    <section class="billing-info">
+
+      <div>
+        <strong>Secure billing</strong>
+        <p>Your payment information is protected.</p>
+      </div>
+
+      <div>
+        <strong>Flexible plans</strong>
+        <p>Change your plan whenever you need.</p>
+      </div>
+
+      <div>
+        <strong>Cancel anytime</strong>
+        <p>No long-term commitment required.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <p>Dropbox UI Demo · SaaS Billing &amp; Pricing</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

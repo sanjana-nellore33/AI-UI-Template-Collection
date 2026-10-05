@@ -1,0 +1,141 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Plans & Pricing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-mark">#</span>
+            Slack
+        </div>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="pricing.html" class="active">Plans & Pricing</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+        <div class="workspace">
+            <p>WORKSPACE</p>
+            <strong>Acme Workspace</strong>
+            <span>24 members</span>
+        </div>
+    </aside>
+
+    <main class="main-content pricing-page">
+
+        <header class="topbar">
+            <div>
+                <p class="small-text">SUBSCRIPTION</p>
+                <h1>Plans & Pricing</h1>
+            </div>
+
+            <a href="index.html" class="back-link">← Dashboard</a>
+        </header>
+
+        <div class="pricing-intro">
+            <h2>Choose the right plan for your team</h2>
+            <p>Simple pricing that grows with your workspace.</p>
+
+            <div class="billing-toggle">
+                <button id="monthlyBtn" class="toggle-active" onclick="setBilling('monthly')">
+                    Monthly
+                </button>
+
+                <button id="yearlyBtn" onclick="setBilling('yearly')">
+                    Yearly
+                </button>
+            </div>
+        </div>
+
+        <section class="pricing-grid">
+
+            <div class="price-card">
+                <h3>Free</h3>
+                <p>For small teams getting started.</p>
+
+                <div class="price">
+                    <strong>$0</strong>
+                    <span>/month</span>
+                </div>
+
+                <button class="outline-btn" onclick="selectPlan('Free')">
+                    Current
+                </button>
+
+                <ul>
+                    <li>✓ 90 days of message history</li>
+                    <li>✓ 1:1 audio and video calls</li>
+                    <li>✓ 10 integrations</li>
+                    <li>✓ Basic workspace tools</li>
+                </ul>
+            </div>
+
+            <div class="price-card featured">
+                <span class="popular">MOST POPULAR</span>
+
+                <h3>Pro</h3>
+                <p>For growing teams that need more.</p>
+
+                <div class="price">
+                    <strong id="proPrice">$8.75</strong>
+                    <span>/member/month</span>
+                </div>
+
+                <button class="primary-btn" onclick="selectPlan('Pro')">
+                    Choose Pro
+                </button>
+
+                <ul>
+                    <li>✓ Unlimited message history</li>
+                    <li>✓ Group audio and video meetings</li>
+                    <li>✓ Unlimited integrations</li>
+                    <li>✓ Advanced administration</li>
+                    <li>✓ Custom workspace features</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>Business+</h3>
+                <p>For organizations with advanced needs.</p>
+
+                <div class="price">
+                    <strong id="businessPrice">$15</strong>
+                    <span>/member/month</span>
+                </div>
+
+                <button class="outline-btn" onclick="selectPlan('Business+')">
+                    Choose Business+
+                </button>
+
+                <ul>
+                    <li>✓ Everything in Pro</li>
+                    <li>✓ Enterprise security</li>
+                    <li>✓ Advanced identity management</li>
+                    <li>✓ Dedicated support</li>
+                    <li>✓ Compliance assistance</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <div class="faq-box">
+            <h3>Need help choosing?</h3>
+            <p>
+                Start with Pro if your team needs unlimited history,
+                advanced collaboration and more integrations.
+            </p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```

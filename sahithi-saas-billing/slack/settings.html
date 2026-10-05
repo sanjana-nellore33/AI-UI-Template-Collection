@@ -1,0 +1,126 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Workspace Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-mark">#</span>
+            Slack
+        </div>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="pricing.html">Plans & Pricing</a>
+            <a href="settings.html" class="active">Settings</a>
+        </nav>
+
+        <div class="workspace">
+            <p>WORKSPACE</p>
+            <strong>Acme Workspace</strong>
+            <span>24 members</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="small-text">WORKSPACE</p>
+                <h1>Settings</h1>
+            </div>
+
+            <a href="index.html" class="back-link">← Dashboard</a>
+        </header>
+
+        <section class="settings-panel">
+
+            <div class="settings-title">
+                <h2>Workspace information</h2>
+                <p>Manage your workspace details.</p>
+            </div>
+
+            <div class="form-group">
+                <label>Workspace name</label>
+                <input type="text" id="workspaceName" value="Acme Workspace">
+            </div>
+
+            <div class="form-group">
+                <label>Workspace URL</label>
+                <input type="text" value="acme-workspace.slack.com">
+            </div>
+
+            <div class="form-group">
+                <label>Admin email</label>
+                <input type="email" value="admin@acmeworkspace.com">
+            </div>
+
+            <button class="primary-btn" onclick="saveSettings()">
+                Save Changes
+            </button>
+
+        </section>
+
+        <section class="settings-panel">
+
+            <div class="settings-title">
+                <h2>Billing settings</h2>
+                <p>Control your subscription and payment information.</p>
+            </div>
+
+            <div class="billing-setting">
+                <div>
+                    <strong>Current plan</strong>
+                    <p>Slack Pro · 24 members</p>
+                </div>
+
+                <a href="pricing.html" class="secondary-btn">
+                    Change plan
+                </a>
+            </div>
+
+            <div class="billing-setting">
+                <div>
+                    <strong>Payment method</strong>
+                    <p>Visa ending in 4242</p>
+                </div>
+
+                <button class="secondary-btn" onclick="updatePayment()">
+                    Update
+                </button>
+            </div>
+
+            <div class="billing-setting">
+                <div>
+                    <strong>Billing cycle</strong>
+                    <p>Monthly · Next payment October 15, 2026</p>
+                </div>
+
+                <span class="status">Active</span>
+            </div>
+
+        </section>
+
+        <section class="danger-panel">
+            <h2>Danger Zone</h2>
+            <p>
+                Deleting a workspace permanently removes its data.
+            </p>
+
+            <button class="danger-btn" onclick="deleteWorkspace()">
+                Delete Workspace
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```

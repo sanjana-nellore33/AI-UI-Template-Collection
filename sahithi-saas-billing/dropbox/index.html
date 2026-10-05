@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropbox - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      Dropbox
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <button class="profile" type="button" onclick="showProfile()">
+      S
+    </button>
+
+  </header>
+
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">WELCOME BACK</p>
+
+        <h1>
+          Everything you need,
+          in one place.
+        </h1>
+
+        <p class="hero-description">
+          Manage your files, storage and Dropbox
+          subscription from your workspace.
+        </p>
+
+      </div>
+
+      <button
+        class="primary-btn"
+        type="button"
+        onclick="uploadFile()"
+      >
+        + Upload file
+      </button>
+
+    </section>
+
+
+    <section class="cards">
+
+      <article class="card">
+
+        <p class="card-label">CURRENT PLAN</p>
+
+        <h2>Dropbox Plus</h2>
+
+        <p>₹999 / month</p>
+
+        <span class="badge">ACTIVE</span>
+
+      </article>
+
+
+      <article class="card">
+
+        <p class="card-label">TOTAL FILES</p>
+
+        <h2>248</h2>
+
+        <p class="success-text">
+          18 files added this month
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <p class="card-label">STORAGE USED</p>
+
+        <h2>1.2 TB</h2>
+
+        <div class="progress">
+          <div class="progress-value"></div>
+        </div>
+
+        <p>1.2 TB of 2 TB used</p>
+
+      </article>
+
+    </section>
+
+
+    <section class="recent-section">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="eyebrow">YOUR FILES</p>
+          <h2>Recent files</h2>
+        </div>
+
+        <button
+          class="small-btn"
+          type="button"
+          onclick="viewAllFiles()"
+        >
+          View all
+        </button>
+
+      </div>
+
+
+      <div class="design-grid">
+
+        <article
+          class="design-card blue"
+          onclick="openFile('Project Presentation')"
+        >
+          <span class="file-icon">📊</span>
+          <span>Project Presentation</span>
+        </article>
+
+
+        <article
+          class="design-card sky"
+          onclick="openFile('Hackathon Report')"
+        >
+          <span class="file-icon">📄</span>
+          <span>Hackathon Report</span>
+        </article>
+
+
+        <article
+          class="design-card navy"
+          onclick="openFile('UI Design')"
+        >
+          <span class="file-icon">🎨</span>
+          <span>UI Design</span>
+        </article>
+
+
+        <article
+          class="design-card purple"
+          onclick="openFile('Team Documents')"
+        >
+          <span class="file-icon">📁</span>
+          <span>Team Documents</span>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <p>Dropbox UI Demo · SaaS Billing &amp; Pricing</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

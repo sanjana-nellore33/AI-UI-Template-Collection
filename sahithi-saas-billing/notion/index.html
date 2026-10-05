@@ -1,0 +1,179 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion - Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span class="notion-icon">N</span>
+        Notion
+    </a>
+
+    <nav class="nav">
+        <a href="index.html" class="active">Workspace</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <button class="profile" onclick="showProfile()">S</button>
+
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">MY WORKSPACE</p>
+
+            <h1>Good afternoon, Sahithi.</h1>
+
+            <p class="hero-description">
+                Organize your ideas, projects, notes and team
+                knowledge in one beautiful workspace.
+            </p>
+
+        </div>
+
+        <button class="primary-btn" onclick="createPage()">
+            + New page
+        </button>
+
+    </section>
+
+
+    <section class="cards">
+
+        <div class="card">
+
+            <p class="card-label">WORKSPACE PLAN</p>
+
+            <h2>Plus</h2>
+
+            <p>Unlimited pages and collaborative workspace.</p>
+
+            <span class="badge">ACTIVE</span>
+
+        </div>
+
+
+        <div class="card">
+
+            <p class="card-label">MEMBERS</p>
+
+            <h2>8</h2>
+
+            <p>Active members in your workspace.</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <p class="card-label">STORAGE</p>
+
+            <h2>68%</h2>
+
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+
+            <p>Workspace storage used.</p>
+
+        </div>
+
+    </section>
+
+
+    <section class="recent-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">RECENT PAGES</p>
+                <h2>Your workspace</h2>
+            </div>
+
+            <button class="small-btn" onclick="viewAllPages()">
+                View all
+            </button>
+
+        </div>
+
+
+        <div class="page-grid">
+
+            <div class="page-card"
+                 onclick="openPage('Project Roadmap')">
+
+                <span class="page-icon">📋</span>
+
+                <h3>Project Roadmap</h3>
+
+                <p>Updated today</p>
+
+            </div>
+
+
+            <div class="page-card"
+                 onclick="openPage('Meeting Notes')">
+
+                <span class="page-icon">📝</span>
+
+                <h3>Meeting Notes</h3>
+
+                <p>Updated yesterday</p>
+
+            </div>
+
+
+            <div class="page-card"
+                 onclick="openPage('Product Ideas')">
+
+                <span class="page-icon">💡</span>
+
+                <h3>Product Ideas</h3>
+
+                <p>Updated 2 days ago</p>
+
+            </div>
+
+
+            <div class="page-card"
+                 onclick="openPage('Team Wiki')">
+
+                <span class="page-icon">📚</span>
+
+                <h3>Team Wiki</h3>
+
+                <p>Updated 4 days ago</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <p>Notion Workspace Demo • SaaS Billing & Pricing</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

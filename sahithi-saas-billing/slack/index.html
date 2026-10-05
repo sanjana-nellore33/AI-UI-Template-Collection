@@ -1,0 +1,134 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Billing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-mark">#</span>
+            Slack
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="pricing.html">Plans & Pricing</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+        <div class="workspace">
+            <p>WORKSPACE</p>
+            <strong>Acme Workspace</strong>
+            <span>24 members</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="small-text">Workspace</p>
+                <h1>Billing Dashboard</h1>
+            </div>
+
+            <button class="upgrade-btn" onclick="goToPricing()">
+                Upgrade Plan
+            </button>
+        </header>
+
+        <section class="welcome-card">
+            <div>
+                <span class="badge">PRO PLAN</span>
+                <h2>Your workspace is running smoothly.</h2>
+                <p>
+                    Manage your Slack subscription, members and billing
+                    from one place.
+                </p>
+            </div>
+
+            <div class="plan-price">
+                <strong>$8.75</strong>
+                <span>/ member / month</span>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Active Members</span>
+                <strong>24</strong>
+                <small>+3 this month</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Monthly Bill</span>
+                <strong>$210</strong>
+                <small>Next payment Oct 15</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Storage Used</span>
+                <strong>68%</strong>
+                <small>6.8 GB of 10 GB</small>
+            </div>
+        </section>
+
+        <section class="content-grid">
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <p class="small-text">CURRENT PLAN</p>
+                        <h2>Pro</h2>
+                    </div>
+                    <span class="status">Active</span>
+                </div>
+
+                <p class="description">
+                    Advanced collaboration tools for growing teams.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Unlimited message history</li>
+                    <li>✓ Group video meetings</li>
+                    <li>✓ Advanced administration</li>
+                    <li>✓ Unlimited integrations</li>
+                </ul>
+
+                <button class="secondary-btn" onclick="goToPricing()">
+                    Manage Plan
+                </button>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <p class="small-text">NEXT PAYMENT</p>
+                        <h2>October 15, 2026</h2>
+                    </div>
+                    <span class="payment-icon">$</span>
+                </div>
+
+                <div class="invoice">
+                    <div>
+                        <span>Pro subscription</span>
+                        <small>24 members × $8.75</small>
+                    </div>
+
+                    <strong>$210.00</strong>
+                </div>
+
+                <button class="secondary-btn" onclick="showInvoice()">
+                    View Invoice
+                </button>
+            </div>
+
+        </section>
+
+        <section class="activity">
+            <div class="panel-header">
+                <div>
+```
