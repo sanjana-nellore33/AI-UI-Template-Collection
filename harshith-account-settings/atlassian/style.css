@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f8f9;
+    color: #172b4d;
+    display: flex;
+}
+
+aside {
+    width: 240px;
+    min-height: 100vh;
+    background: white;
+    border-right: 1px solid #dfe1e6;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    background: #1868db;
+    color: white;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+aside > b {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+nav {
+    display: grid;
+    gap: 6px;
+}
+
+nav a {
+    color: #42526e;
+    text-decoration: none;
+    padding: 11px 12px;
+    border-radius: 7px;
+}
+
+nav a.active,
+nav a:hover {
+    background: #deebff;
+    color: #0c66e4;
+}
+
+.bottom {
+    margin-top: auto;
+    color: #172b4d;
+}
+
+.bottom small {
+    color: #6b778c;
+}
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 45px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+header span {
+    font-size: 11px;
+    letter-spacing: 1.7px;
+    color: #0c66e4;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 9px 0;
+}
+
+header p {
+    color: #6b778c;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #6554c0;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.large {
+    width: 85px;
+    height: 85px;
+    font-size: 25px;
+}
+
+.account {
+    background: white;
+    border: 1px solid #dfe1e6;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.account h2 {
+    margin: 0;
+}
+
+.account p {
+    color: #6b778c;
+}
+
+.status {
+    background: #e3fcef;
+    color: #006644;
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.account > a {
+    margin-left: auto;
+    color: #0c66e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.products,
+.form,
+.settings {
+    background: white;
+    border: 1px solid #dfe1e6;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 18px;
+}
+
+.products > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    align-items: center;
+    padding: 17px 0;
+    border-top: 1px solid #eee;
+}
+
+.products span {
+    color: #6b778c;
+}
+
+.products button,
+.form button {
+    background: #0c66e4;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form {
+    max-width: 700px;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #b7b9bc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.settings {
+    padding: 0;
+}
+
+.settings > div {
+    padding: 22px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-right: 90px;
+}
+
+.settings > div:last-child {
+    border: 0;
+}
+
+.settings p {
+    color: #6b778c;
+}
+
+.switch {
+    position: absolute;
+    right: 22px;
+    top: 25px;
+    border: 0;
+    border-radius: 20px;
+    padding: 8px 13px;
+    background: #dfe1e6;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch.on {
+    background: #36b37e;
+    color: white;
+}
+
+.danger {
+    margin-top: 20px;
+    border: 0;
+    background: #ffebe6;
+    color: #bf2600;
+    padding: 11px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #172b4d;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 7px;
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        display: block;
+    }
+
+    aside {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    aside > b {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        display: flex;
+        overflow: auto;
+    }
+
+    .bottom {
+        display: none;
+    }
+
+    main {
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .account {
+        flex-wrap: wrap;
+    }
+
+    .account > a {
+        margin-left: 0;
+    }
+
+    .products > div {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+}

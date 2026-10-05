@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Figma Settings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="figma-logo">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <div class="brand">
+        Figma
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Overview
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <a class="active" href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+
+    <div class="top-user">
+        HR
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+
+        <h3>
+            Settings
+        </h3>
+
+
+        <a
+            class="selected"
+            href="#general"
+            onclick="showSection('general')">
+
+            General
+
+        </a>
+
+
+        <a
+            href="#security"
+            onclick="showSection('security')">
+
+            Security
+
+        </a>
+
+
+        <a
+            href="#notifications"
+            onclick="showSection('notifications')">
+
+            Notifications
+
+        </a>
+
+
+        <a
+            href="#appearance"
+            onclick="showSection('appearance')">
+
+            Appearance
+
+        </a>
+
+
+        <hr>
+
+
+        <p class="side-title">
+            Account
+        </p>
+
+
+        <div class="workspace">
+
+            <div class="workspace-icon">
+                HR
+            </div>
+
+            <div>
+
+                <strong>
+                    Harshith Reddy
+                </strong>
+
+                <small>
+                    Personal account
+                </small>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <main>
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    FIGMA ACCOUNT
+                </p>
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p>
+                    Manage your account preferences and security.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GENERAL -->
+
+        <section
+            id="general"
+            class="settings-section">
+
+            <div class="settings-title">
+
+                <h2>
+                    General
+                </h2>
+
+                <p>
+                    Manage your basic account information.
+                </p>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Email address
+                    </h3>
+
+                    <p>
+                        saiharshithreddy@example.com
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="secondary-button"
+                    onclick="toast('Email editor opened')">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Language
+                    </h3>
+
+                    <p>
+                        Select your preferred language.
+                    </p>
+
+                </div>
+
+
+                <select
+                    onchange="toast('Language updated')">
+
+                    <option>
+                        English
+                    </option>
+
+                    <option>
+                        Telugu
+                    </option>
+
+                    <option>
+                        Hindi
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECURITY -->
+
+        <section
+            id="security"
+            class="settings-section">
+
+            <div class="settings-title">
+
+                <h2>
+                    Security
+                </h2>
+
+                <p>
+                    Protect your Figma account.
+                </p>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Two-factor authentication
+                    </h3>
+
+                    <p>
+                        Add an extra layer of account security.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="toggle"
+                    onclick="toggle(this)">
+
+                    OFF
+
+                </button>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Password
+                    </h3>
+
+                    <p>
+                        Change your account password.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="secondary-button"
+                    onclick="toast('Password editor opened')">
+
+                    Change
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NOTIFICATIONS -->
+
+        <section
+            id="notifications"
+            class="settings-section">
+
+            <div class="settings-title">
+
+                <h2>
+                    Notifications
+                </h2>
+
+                <p>
+                    Choose the notifications you want to receive.
+                </p>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Email notifications
+                    </h3>
+
+                    <p>
+                        Receive important account updates.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="toggle on"
+                    onclick="toggle(this)">
+
+                    ON
+
+                </button>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Workspace activity
+                    </h3>
+
+                    <p>
+                        Receive updates about workspace activity.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="toggle on"
+                    onclick="toggle(this)">
+
+                    ON
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- APPEARANCE -->
+
+        <section
+            id="appearance"
+            class="settings-section">
+
+            <div class="settings-title">
+
+                <h2>
+                    Appearance
+                </h2>
+
+                <p>
+                    Customize the appearance of your Figma account.
+                </p>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Theme
+                    </h3>
+
+                    <p>
+                        Select your preferred interface theme.
+                    </p>
+
+                </div>
+
+
+                <select
+                    onchange="changeTheme(this.value)">
+
+                    <option value="light">
+                        Light
+                    </option>
+
+                    <option value="dark">
+                        Dark
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <h3>
+                        Compact mode
+                    </h3>
+
+                    <p>
+                        Reduce spacing between interface elements.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="toggle"
+                    onclick="toggle(this)">
+
+                    OFF
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

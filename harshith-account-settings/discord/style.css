@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #202225;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 245px;
+    background: #202225;
+    color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    background: #5865f2;
+    border-radius: 12px;
+    margin-right: 8px;
+}
+
+.sidebar nav {
+    display: grid;
+    gap: 8px;
+}
+
+.sidebar a {
+    color: #b9bbbe;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #5865f2;
+    color: white;
+}
+
+.user {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user small {
+    display: block;
+    color: #aaa;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #5865f2;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.big {
+    width: 90px;
+    height: 90px;
+    font-size: 25px;
+    margin: auto;
+}
+
+.huge {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    border: 5px solid white;
+    margin-top: -50px;
+}
+
+main {
+    flex: 1;
+    padding: 45px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 5px 0;
+}
+
+header p {
+    color: #6b7280;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: bold;
+    color: #5865f2;
+    letter-spacing: 1.5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 18px;
+}
+
+.wide {
+    grid-column: 1 / -1;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e2e3e5;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 5px 20px #00000008;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card .button {
+    display: block;
+    margin-top: 20px;
+}
+
+.badge {
+    display: inline-block;
+    color: #23a559;
+    background: #e7f8ef;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 18px 0 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5d7dc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.primary,
+.secondary,
+.button,
+.danger,
+.toggle,
+.themes button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary {
+    background: #5865f2;
+    color: white;
+}
+
+.secondary,
+.button,
+.themes button {
+    background: #eef0f3;
+    color: #303338;
+}
+
+.danger {
+    background: #fee2e2;
+    color: #b91c1c;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding: 18px 0;
+}
+
+.row p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.toggle {
+    background: #777;
+    color: white;
+    min-width: 58px;
+}
+
+.toggle.on {
+    background: #23a559;
+}
+
+.banner {
+    height: 150px;
+    background: linear-gradient(120deg, #5865f2, #9b59b6);
+    border-radius: 14px 14px 0 0;
+    margin: -24px -24px 20px;
+}
+
+.profile-editor {
+    padding-top: 0;
+}
+
+.themes {
+    display: flex;
+    gap: 10px;
+}
+
+#toast {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #202225;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 9px;
+    display: none;
+}
+
+@media (max-width: 750px) {
+
+    .app {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar nav {
+        display: flex;
+    }
+
+    .user {
+        margin-top: 20px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        display: block;
+    }
+
+    .wide {
+        grid-column: auto;
+    }
+}

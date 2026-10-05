@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Figma Account</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="figma-logo">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="brand">
+        Figma
+    </div>
+
+    <nav>
+        <a class="active" href="index.html">Overview</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <div class="top-user">
+        HR
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h3>Account</h3>
+
+        <a class="selected" href="index.html">
+            Overview
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+        <hr>
+
+        <p class="side-title">
+            Workspace
+        </p>
+
+        <div class="workspace">
+            <div class="workspace-icon">
+                H
+            </div>
+
+            <div>
+                <strong>Harshith's Team</strong>
+                <small>Professional</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    FIGMA ACCOUNT
+                </p>
+
+                <h1>
+                    Account overview
+                </h1>
+
+                <p>
+                    Manage your Figma profile, workspace and account preferences.
+                </p>
+
+            </div>
+
+            <a class="primary-button" href="profile.html">
+                Edit profile
+            </a>
+
+        </section>
+
+
+        <section class="profile-card">
+
+            <div class="avatar">
+                HR
+            </div>
+
+            <div class="profile-info">
+
+                <h2>
+                    Harshith Reddy
+                </h2>
+
+                <p class="username">
+                    @harshitreddy-1692
+                </p>
+
+                <p>
+                    Student designer and developer interested in UI/UX,
+                    web development and modern digital products.
+                </p>
+
+                <div class="tags">
+
+                    <span>UI/UX</span>
+                    <span>Student</span>
+                    <span>Developer</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Profile
+                </h3>
+
+                <p>
+                    Update your name, profile photo, bio and personal information.
+                </p>
+
+                <a href="profile.html">
+                    Manage profile →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Account settings
+                </h3>
+
+                <p>
+                    Manage account preferences, notifications and security.
+                </p>
+
+                <a href="settings.html">
+                    Open settings →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Workspace
+                </h3>
+
+                <p>
+                    View your current team workspace and plan information.
+                </p>
+
+                <button onclick="showWorkspace()">
+                    View workspace →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="recent">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Recent activity
+                    </h2>
+
+                    <p>
+                        Your latest account and workspace activity.
+                    </p>
+
+                </div>
+
+                <button onclick="clearActivity()">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div id="activityList">
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Profile updated
+                        </strong>
+
+                        <p>
+                            Your profile information was updated.
+                        </p>
+                    </div>
+
+                    <small>
+                        Today
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ◇
+                    </div>
+
+                    <div>
+                        <strong>
+                            Workspace opened
+                        </strong>
+
+                        <p>
+                            You accessed Harshith's Team workspace.
+                        </p>
+                    </div>
+
+                    <small>
+                        Yesterday
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+                        <strong>
+                            Account settings viewed
+                        </strong>
+
+                        <p>
+                            You opened your account settings.
+                        </p>
+                    </div>
+
+                    <small>
+                        3 days ago
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

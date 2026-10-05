@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Trello - Settings</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+▦ Trello
+</div>
+
+<nav>
+
+<a href="index.html">
+Account
+</a>
+
+<a href="profile.html">
+Profile
+</a>
+
+<a class="active"
+href="settings.html">
+Settings
+</a>
+
+</nav>
+
+<div class="avatar">
+HR
+</div>
+
+</header>
+
+<main>
+
+<section class="welcome">
+
+<span>SETTINGS</span>
+
+<h1>
+Account Settings
+</h1>
+
+<p>
+Manage notifications and workspace behavior.
+</p>
+
+</section>
+
+<section class="settings">
+
+<div class="setting">
+
+<div>
+
+<b>Email Notifications</b>
+
+<p>
+Receive updates about boards and cards.
+</p>
+
+</div>
+
+<button class="switch on"
+onclick="toggle(this)">
+ON
+</button>
+
+</div>
+
+<div class="setting">
+
+<div>
+
+<b>Weekly Summary</b>
+
+<p>
+Get a weekly activity summary.
+</p>
+
+</div>
+
+<button class="switch"
+onclick="toggle(this)">
+OFF
+</button>
+
+</div>
+
+<div class="setting">
+
+<div>
+
+<b>Keyboard Shortcuts</b>
+
+<p>
+Enable faster board navigation.
+</p>
+
+</div>
+
+<button class="switch on"
+onclick="toggle(this)">
+ON
+</button>
+
+</div>
+
+</section>
+
+<div id="toast"></div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

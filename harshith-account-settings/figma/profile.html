@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Figma Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="figma-logo">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="brand">
+        Figma
+    </div>
+
+    <nav>
+        <a href="index.html">Overview</a>
+        <a class="active" href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <div class="top-user">
+        HR
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h3>Profile</h3>
+
+        <a href="index.html">
+            Overview
+        </a>
+
+        <a class="selected" href="profile.html">
+            Profile
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+        <hr>
+
+        <p class="side-title">
+            Profile visibility
+        </p>
+
+        <div class="workspace">
+            <div class="workspace-icon">
+                ✓
+            </div>
+
+            <div>
+                <strong>Public</strong>
+                <small>Your profile is visible</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    FIGMA PROFILE
+                </p>
+
+                <h1>
+                    Edit your profile
+                </h1>
+
+                <p>
+                    Customize the information people see about you.
+                </p>
+
+            </div>
+
+            <button
+                class="primary-button"
+                onclick="saveProfile()">
+
+                Save profile
+
+            </button>
+
+        </section>
+
+
+        <section class="profile-editor">
+
+
+            <!-- PROFILE PREVIEW -->
+
+            <div class="editor-preview">
+
+                <div class="preview-label">
+                    PROFILE PREVIEW
+                </div>
+
+                <div class="profile-avatar">
+                    HR
+                </div>
+
+                <h2 id="previewName">
+                    Harshith Reddy
+                </h2>
+
+                <p id="previewUsername">
+                    @harshitreddy-1692
+                </p>
+
+                <p id="previewBio">
+                    Student designer and developer interested in
+                    UI/UX, web development and modern digital products.
+                </p>
+
+                <div class="preview-line">
+                    📍 India
+                </div>
+
+                <div class="preview-line">
+                    🎨 UI/UX Designer
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="form-panel">
+
+                <label>
+                    Name
+
+                    <input
+                        type="text"
+                        id="nameInput"
+                        value="Harshith Reddy"
+                        oninput="updatePreview()">
+                </label>
+
+
+                <label>
+                    Username
+
+                    <input
+                        type="text"
+                        id="usernameInput"
+                        value="harshitreddy-1692"
+                        oninput="updatePreview()">
+                </label>
+
+
+                <label>
+                    Bio
+
+                    <textarea
+                        id="bioInput"
+                        oninput="updatePreview()">Student designer and developer interested in UI/UX, web development and modern digital products.</textarea>
+
+                </label>
+
+
+                <label>
+                    Location
+
+                    <input
+                        type="text"
+                        value="India">
+                </label>
+
+
+                <label>
+                    Website
+
+                    <input
+                        type="text"
+                        value="figma.com">
+                </label>
+
+
+                <div class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="available"
+                        checked>
+
+                    <label for="available">
+                        Available for collaboration
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    onclick="saveProfile()">
+
+                    Save changes
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

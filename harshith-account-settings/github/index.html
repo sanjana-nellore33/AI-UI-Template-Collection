@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Account</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="github-logo">
+        ◉
+    </div>
+
+    <div class="brand">
+        GitHub
+    </div>
+
+    <nav>
+        <a class="active" href="index.html">Account</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <div class="top-user">
+        HR
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h3>Account</h3>
+
+        <a class="selected" href="index.html">
+            Overview
+        </a>
+
+        <a href="profile.html">
+            Public profile
+        </a>
+
+        <a href="settings.html">
+            Account settings
+        </a>
+
+        <hr>
+
+        <p class="side-title">
+            Account status
+        </p>
+
+        <div class="status">
+            <span></span>
+            Active
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    GITHUB ACCOUNT
+                </p>
+
+                <h1>
+                    Account overview
+                </h1>
+
+                <p>
+                    Manage your developer identity and account information.
+                </p>
+
+            </div>
+
+            <a class="edit-button" href="profile.html">
+                Edit profile
+            </a>
+
+        </section>
+
+
+        <section class="profile-summary">
+
+            <div class="avatar large">
+                HR
+            </div>
+
+            <div class="profile-info">
+
+                <h2>
+                    Harshith Reddy
+                </h2>
+
+                <p class="username">
+                    @harshitreddy-1692
+                </p>
+
+                <p>
+                    Student developer interested in web development,
+                    AI and modern user interfaces.
+                </p>
+
+                <div class="profile-tags">
+
+                    <span>
+                        Student
+                    </span>
+
+                    <span>
+                        Developer
+                    </span>
+
+                    <span>
+                        UI / UX
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Public Profile
+                </h3>
+
+                <p>
+                    Control the information other developers see
+                    on your GitHub profile.
+                </p>
+
+                <a href="profile.html">
+                    Manage profile →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Account Settings
+                </h3>
+
+                <p>
+                    Manage security, notifications and account
+                    preferences.
+                </p>
+
+                <a href="settings.html">
+                    Open settings →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Account Status
+                </h3>
+
+                <p>
+                    Your account is active and ready for development.
+                </p>
+
+                <strong class="active-text">
+                    ● Active
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Recent account activity
+                    </h2>
+
+                    <p>
+                        A quick look at your recent account actions.
+                    </p>
+
+                </div>
+
+                <button onclick="clearActivity()">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div id="activityList">
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <b>
+                            Profile updated
+                        </b>
+
+                        <p>
+                            Your public profile information was updated.
+                        </p>
+
+                    </div>
+
+                    <small>
+                        Today
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <b>
+                            Account settings viewed
+                        </b>
+
+                        <p>
+                            You opened your account settings.
+                        </p>
+
+                    </div>
+
+                    <small>
+                        Yesterday
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <b>
+                            Security check
+                        </b>
+
+                        <p>
+                            Your account security settings were checked.
+                        </p>
+
+                    </div>
+
+                    <small>
+                        3 days ago
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

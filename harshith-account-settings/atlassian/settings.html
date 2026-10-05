@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Atlassian - Settings</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<aside>
+
+<div class="logo">
+A
+</div>
+
+<b>
+Atlassian
+</b>
+
+<nav>
+
+<a href="index.html">
+Account
+</a>
+
+<a href="profile.html">
+Profile
+</a>
+
+<a class="active"
+href="settings.html">
+Settings
+</a>
+
+</nav>
+
+<div class="bottom">
+
+Harshith Reddy
+
+<br>
+
+<small>
+Personal account
+</small>
+
+</div>
+
+</aside>
+
+<main>
+
+<header>
+
+<div>
+
+<span>
+SETTINGS
+</span>
+
+<h1>
+Account Settings
+</h1>
+
+<p>
+Security and communication preferences.
+</p>
+
+</div>
+
+</header>
+
+<section class="settings">
+
+<div>
+
+<b>
+Product Emails
+</b>
+
+<p>
+Receive tips and product announcements.
+</p>
+
+<button class="switch on"
+onclick="toggle(this)">
+ON
+</button>
+
+</div>
+
+<div>
+
+<b>
+Security Alerts
+</b>
+
+<p>
+Receive important account security messages.
+</p>
+
+<button class="switch on"
+onclick="toggle(this)">
+ON
+</button>
+
+</div>
+
+<div>
+
+<b>
+Two-step Verification
+</b>
+
+<p>
+Add extra protection to your account.
+</p>
+
+<button class="switch"
+onclick="toggle(this)">
+OFF
+</button>
+
+</div>
+
+</section>
+
+<button class="danger"
+onclick="toast('Demo sign-out action selected')">
+Sign Out
+</button>
+
+<div id="toast"></div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

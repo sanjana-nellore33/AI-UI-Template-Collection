@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Discord - Settings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <span class="logo">☁</span>
+            Discord
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Account
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a class="active"
+               href="settings.html">
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="user">
+
+            <div class="avatar">
+                HR
+            </div>
+
+            <div>
+                <b>Harshith</b>
+                <small>Online</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <main>
+
+        <header>
+
+            <div>
+
+                <p class="eyebrow">
+                    PREFERENCES
+                </p>
+
+                <h1>Settings</h1>
+
+                <p>
+                    Control how your Discord account behaves.
+                </p>
+
+            </div>
+
+        </header>
+
+        <section class="card">
+
+            <h3>Notifications</h3>
+
+            <div class="row">
+
+                <div>
+                    <b>Desktop Notifications</b>
+                    <p>Show alerts for new activity.</p>
+                </div>
+
+                <button class="toggle on"
+                        onclick="toggle(this)">
+                    ON
+                </button>
+
+            </div>
+
+            <div class="row">
+
+                <div>
+                    <b>Email Notifications</b>
+                    <p>Receive account updates.</p>
+                </div>
+
+                <button class="toggle"
+                        onclick="toggle(this)">
+                    OFF
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h3>Privacy</h3>
+
+            <div class="row">
+
+                <div>
+                    <b>Allow Direct Messages</b>
+                    <p>Allow other users to contact you.</p>
+                </div>
+
+                <button class="toggle on"
+                        onclick="toggle(this)">
+                    ON
+                </button>
+
+            </div>
+
+            <button class="danger"
+                    onclick="confirmAction()">
+                Delete Account
+            </button>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

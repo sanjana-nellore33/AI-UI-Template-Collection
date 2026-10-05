@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord - Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <span class="logo">☁</span>
+            Discord
+        </div>
+
+        <nav>
+            <a class="active" href="index.html">Account</a>
+            <a href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+        <div class="user">
+            <div class="avatar">HR</div>
+            <div>
+                <b>Harshith</b>
+                <small>Online</small>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+
+        <header>
+            <div>
+                <p class="eyebrow">ACCOUNT CENTER</p>
+                <h1>My Account</h1>
+                <p>Manage your Discord account information.</p>
+            </div>
+
+            <button class="primary" onclick="toast('Changes saved')">
+                Save Changes
+            </button>
+        </header>
+
+        <section class="grid">
+
+            <article class="card profile-card">
+
+                <div class="avatar big">HR</div>
+
+                <h2>Harshith Reddy</h2>
+
+                <p>@harshitreddy-1692</p>
+
+                <span class="badge">● Online</span>
+
+                <a class="button" href="profile.html">
+                    Edit Profile
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Account Information</h3>
+
+                <label>Username</label>
+                <input id="username"
+                       value="harshitreddy-1692">
+
+                <label>Email</label>
+                <input value="harshitreddy@example.com">
+
+                <label>Phone</label>
+                <input value="+91 9XXXXXXXXX">
+
+                <button class="secondary"
+                        onclick="saveAccount()">
+                    Update Account
+                </button>
+
+            </article>
+
+            <article class="card wide">
+
+                <h3>Security</h3>
+
+                <div class="row">
+
+                    <div>
+                        <b>Two-factor authentication</b>
+                        <p>Add an extra layer of security.</p>
+                    </div>
+
+                    <button class="toggle"
+                            onclick="toggle(this)">
+                        OFF
+                    </button>
+
+                </div>
+
+                <div class="row">
+
+                    <div>
+                        <b>Password</b>
+                        <p>Keep your password secure.</p>
+                    </div>
+
+                    <button class="secondary"
+                            onclick="toast('Password option selected')">
+                        Change
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

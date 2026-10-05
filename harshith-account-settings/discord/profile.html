@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discord - Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <span class="logo">☁</span>
+            Discord
+        </div>
+
+        <nav>
+            <a href="index.html">Account</a>
+            <a class="active" href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+        <div class="user">
+            <div class="avatar">HR</div>
+
+            <div>
+                <b>Harshith</b>
+                <small>Online</small>
+            </div>
+        </div>
+
+    </aside>
+
+    <main>
+
+        <header>
+
+            <div>
+                <p class="eyebrow">PROFILE</p>
+
+                <h1>Customize Your Profile</h1>
+
+                <p>Make your Discord profile personal.</p>
+            </div>
+
+            <button class="primary"
+                    onclick="saveProfile()">
+                Save Profile
+            </button>
+
+        </header>
+
+        <section class="card profile-editor">
+
+            <div class="banner"></div>
+
+            <div class="avatar huge">HR</div>
+
+            <label>Display Name</label>
+
+            <input id="displayName"
+                   value="Harshith Reddy">
+
+            <label>About Me</label>
+
+            <textarea id="about">
+Computer science student building useful web interfaces.
+            </textarea>
+
+            <label>Profile Theme</label>
+
+            <div class="themes">
+
+                <button onclick="setTheme('purple')">
+                    Purple
+                </button>
+
+                <button onclick="setTheme('dark')">
+                    Dark
+                </button>
+
+                <button onclick="setTheme('light')">
+                    Light
+                </button>
+
+            </div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

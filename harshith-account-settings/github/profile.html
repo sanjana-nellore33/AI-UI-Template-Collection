@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="github-logo">
+        ◉
+    </div>
+
+    <div class="brand">
+        GitHub
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Account
+        </a>
+
+        <a class="active" href="profile.html">
+            Profile
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+    <div class="top-user">
+        HR
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+
+        <h3>
+            Account
+        </h3>
+
+        <a href="index.html">
+            Overview
+        </a>
+
+        <a class="selected" href="profile.html">
+            Public profile
+        </a>
+
+        <a href="settings.html">
+            Account settings
+        </a>
+
+        <hr>
+
+        <p class="side-title">
+            Profile visibility
+        </p>
+
+        <div class="visibility">
+            Public
+        </div>
+
+    </aside>
+
+
+    <main>
+
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    PUBLIC PROFILE
+                </p>
+
+                <h1>
+                    Edit your profile
+                </h1>
+
+                <p>
+                    Customize how other developers see you.
+                </p>
+
+            </div>
+
+            <button class="primary-button"
+                    onclick="saveProfile()">
+
+                Save profile
+
+            </button>
+
+        </section>
+
+
+        <section class="profile-editor">
+
+
+            <div class="editor-preview">
+
+                <div class="preview-label">
+                    PROFILE PREVIEW
+                </div>
+
+                <div class="avatar profile-avatar">
+                    HR
+                </div>
+
+                <h2 id="previewName">
+                    Harshith Reddy
+                </h2>
+
+                <p id="previewUsername">
+                    @harshitreddy-1692
+                </p>
+
+                <p id="previewBio">
+                    Student developer interested in web development,
+                    AI and modern UI.
+                </p>
+
+                <div class="preview-line">
+                    📍 India
+                </div>
+
+                <div class="preview-line">
+                    🔗 github.com/harshitreddy-1692
+                </div>
+
+            </div>
+
+
+            <div class="form-panel">
+
+                <label>
+                    Name
+
+                    <input
+                        id="nameInput"
+                        type="text"
+                        value="Harshith Reddy"
+                        oninput="updatePreview()">
+
+                </label>
+
+
+                <label>
+                    Username
+
+                    <input
+                        id="usernameInput"
+                        type="text"
+                        value="harshitreddy-1692"
+                        oninput="updatePreview()">
+
+                </label>
+
+
+                <label>
+                    Bio
+
+                    <textarea
+                        id="bioInput"
+                        oninput="updatePreview()">Student developer interested in web development, AI and modern UI.</textarea>
+
+                </label>
+
+
+                <label>
+                    Location
+
+                    <input
+                        type="text"
+                        value="India">
+
+                </label>
+
+
+                <label>
+                    Website
+
+                    <input
+                        type="text"
+                        value="https://github.com/harshitreddy-1692">
+
+                </label>
+
+
+                <div class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="available"
+                        checked>
+
+                    <label for="available">
+                        Available for collaboration
+                    </label>
+
+                </div>
+
+
+                <button class="primary-button"
+                        onclick="saveProfile()">
+
+                    Save changes
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <div id="toast"></div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
