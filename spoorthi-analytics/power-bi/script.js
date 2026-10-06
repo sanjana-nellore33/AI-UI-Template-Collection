@@ -1,3 +1,3 @@
 function showMessage() {
-    alert("Power BI action completed successfully!");
+    alert("Power BI action selected successfully!");
 }
